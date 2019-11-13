@@ -17,12 +17,12 @@
               <h3 class="text-black mb-4 font-weight-bold">About This Product</h3>
               <p class="mb-4"><%= @product.description %></p>
               
-              <div class="mb-4"> 
-                <h3 class="text-black font-weight-bold h5">Price:</h3>
-                <div class="price"><del class="mr-2">$269.00</del> <%= @product.price %>FCA</div>
+              <div class="mb-4">
+                <div class="price"><span class="price-tag">Price: </span><del class="mr-2">$269.00</del> <%= @product.price %>FCA</div>
               </div>
+              <h3>Avalability: <%= @product.availability %></h3>
               <p>
-                <a href="#" class="btn btn-black rounded-0 d-block d-lg-inline-block">Add To Cart</a>
+                <%= button_to "Add to cart", line_items_path(product_id: @product), class: "button is-warning add-to-cart" %>
               </p>
             </div>
           </div>

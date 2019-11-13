@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="container cart-show container">
+	<div class="row justify-content-center">
+		<%= link_to 'Keep Shopping', products_path %>
+	</div>
+	
+	<% @cart.line_items.each do |line_item| %>
+	<div class="row cart-show-row-grid">
+		<div class="col-md-2 col-sm-4 mx-auto bg-danger">
+			<h4 class="d-inline d-sm-block">product name<span class="d-sm-none"> : : </span></h4>
+			<p class="d-inline d-sm-block"><%= line_item.product.title %></p>
+		</div>
+		<div class="col-md-3 col-sm-4 mx-auto">
+			<h4 class="d-inline d-sm-block">Product photo</h4>
+			<%= image_tag(line_item.product.photo_link, style: "width: 100px;") %>
+		</div>
+		<div class="col-md-2 col-sm-4 mx-auto">
+			<h4 class="d-inline d-sm-block">quantity</h4>
+			<p class="d-inline d-sm-block"><%= line_item.quantity %></p>
+		</div>
+		<div class="col-md-3 col-sm-6 mx-auto">
+			<h4 class="d-inline d-sm-block">amount for quantity</h4>
+			<p class="d-inline d-sm-block"><%= number_to_currency(line_item.total_price) %></p>
+		</div>
+		<div class="col-md-2 col-sm-6 mx-auto">
+			<%= link_to "Remove Item", line_item, method: :delete, data: { confirm: "Are you sure? "}, class: "button is-small mb4" %>
+		</div>
+		
+	</div>
+	<hr>
+	<% end %>
+	<h4> <span>Total:</span><%= number_to_currency(@cart.total_price) %></h4>
+	<%= button_to "Empty Cart", @cart, method: :delete, data: { confirm: "Are you sure? "}, class: "button is-danger" %> 
+</div>
+
+<h1 id="check">checkout</h1>
+
+
