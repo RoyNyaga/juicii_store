@@ -33,8 +33,9 @@
 	<% end %>
 	<h4> <span>Total:</span><%= number_to_currency(@cart.total_price) %></h4>
 	<%= button_to "Empty Cart", @cart, method: :delete, data: { confirm: "Are you sure? "}, class: "button is-danger" %> 
+	<%= link_to "make payment", new_payment_path %>
 </div>
 
-<h1 id="check">checkout</h1>
+
 
 
