@@ -1,4 +1,8 @@
 class PaymentsController < ApplicationController
+	
+	def index
+		@payments = current_user.payments
+	end 
 
 	def new 
 		@payment = Payment.new
@@ -7,10 +11,10 @@ class PaymentsController < ApplicationController
 	def create
 		@payment = current_user.payments.new(payment_params)
 		if @payment.valid?
-			Transaction.pay(@payment.phone, @payment.amount)
+			# Transaction.pay(@payment.phone, @payment.amount)
 			@payment.save
 			flash[:success] = "dial *126# to accept payment"
-			redirect_back(fallback_location: root_path)
+			redirect_to payments_path
 		else
 			flash[:info] = "please enter a correct phone number and a valid amount"
 			render "payments/new"
@@ -20,6 +24,8 @@ class PaymentsController < ApplicationController
 	private
 
 	def payment_params
-		params.require(:payment).permit(:phone, :amount)
+		params.require(:payment).permit(:phone, :amount, :delivery, 
+			:location, :delivery_fees, :account_name, :products, :username)
 	end 
 end
+

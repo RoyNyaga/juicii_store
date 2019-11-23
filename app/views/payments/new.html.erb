@@ -1,5 +1,12 @@
 <%= simple_form_for(@payment) do |f| %>
 	<%= f.input :phone %>
 	<%= f.input :amount %>
+	<%= f.input :delivery %>
+	<%= f.input :location %>
+	<%= f.input :delivery_fees %>
+	<%= f.input :account_name %>
+	<%= f.input :products %>
+	<%= f.input :username %>
 	<%= f.button :submit, "pay" %>
 <% end %> 
+
