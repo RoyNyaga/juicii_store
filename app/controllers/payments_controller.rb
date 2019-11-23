@@ -1,5 +1,6 @@
 class PaymentsController < ApplicationController
-	
+	before_action :authenticate_user!
+
 	def index
 		@payments = current_user.payments
 	end 
@@ -13,7 +14,7 @@ class PaymentsController < ApplicationController
 		if @payment.valid?
 			# Transaction.pay(@payment.phone, @payment.amount)
 			@payment.save
-			flash[:success] = "dial *126# to accept payment"
+			flash[:notice] = "dial *126# to accept payment"
 			redirect_to payments_path
 		else
 			flash[:info] = "please enter a correct phone number and a valid amount"
