@@ -60,3 +60,23 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+#---------my added gems
+
+
+
+# active admin and Plus integrations with:
+gem 'activeadmin'
+gem 'devise'
+# Bootstrap 4 gem
+gem 'bootstrap', '~> 4.3.1'
+
+# jQuery gem
+gem 'jquery-rails'
+
+#font awesome 5 gem
+gem 'font_awesome5_rails'
+
+gem 'httparty', '~> 0.17.1'
+gem 'simple_form', '~> 5.0', '>= 5.0.1'
+

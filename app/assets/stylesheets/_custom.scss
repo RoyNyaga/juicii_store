@@ -1,0 +1,120 @@
+
+/*######################### header ##########################*/
+/*first-layer-section*/
+
+#first-header-section {
+    padding: 10px;
+    background: #f8f9fa;
+}
+.first-header-section-div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.social-media-icons-div ul {
+    list-style: none;
+    padding: 0px;
+    
+}
+
+.social-media-icons-div ul li {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 0.7em;
+}
+
+.social-media-icons-div ul li a {
+    color: white;
+    padding: 9px;
+    border: 1px solid black;
+    background: black;
+    border-radius: 100%;
+}
+.social-media-icons-div ul li a:hover {
+    color: #f16821;
+}
+
+#first-layer-contact-div ul {
+    list-style: none;
+}
+
+#first-layer-contact-div ul li{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#first-layer-contact-div ul li a {
+    color: #f16821;
+    text-decoration: none;
+}
+
+#first-layer-contact-div ul li a:hover .right-icons {
+    color: #7b2e06;
+}
+
+#first-layer-contact-div ul li a span {
+    color: black;
+    padding-left: 5px;
+}
+
+/*navbar##*/
+
+.navbar-brand {
+    font-size: 3em;
+    color: black;
+}
+
+#full-stop {
+    color: #f16821;
+}
+
+/*end navbar*/
+
+/*header-third-section*/
+.header-third-layer {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), image_url('hero_2.jpg')center/cover fixed no-repeat;
+    color: white;
+}
+
+.header-third-layer-div {
+    height: 100%;
+}
+
+.header-btn {
+    color: white;
+    border: 2px solid white;
+}
+
+.header-btn:hover {
+    background: white;
+}
+
+/*end of header third section*/
+
+/*#######################end of header###################*/
+
+/*################ main start ########################*/
+
+/*our products*/
+
+
+.our-products-sub-title {
+    color: #adb5bd;
+    font-size: 1.2em;
+    font-variant: small-caps
+}
+
+.our-products-intro {
+    color: #adb5bd;
+}
+
+/*end our products*/
+
+/*client*/
+.client-photo {
+    width: 100px;
+}
+/*end client*/
+
