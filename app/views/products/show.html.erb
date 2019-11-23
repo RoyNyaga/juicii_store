@@ -27,4 +27,25 @@
             </div>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-md-3">
+              <%= current_user.name %>
+            </div>
+            <div class="col-md-6">
+              <%= render 'reviews/form', review: @review %>
+            </div>
+        </div>
+
+        <div class="row">
+          <% @reviews.each do |review| %>
+             <div class="col-md-3">
+              <%= review.user.name %>
+            </div>
+            <div class="col-md-9">
+              <%= review.content %>
+            </div>
+          <% end %>
+          
+        </div>
       </div>
