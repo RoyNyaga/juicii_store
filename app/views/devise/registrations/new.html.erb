@@ -1,44 +1,24 @@
 <%= render "layouts/flash_messages" %>
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-md-6 mx-auto">
-      <h2>Sign up</h2>
-
+    <div class="col-md-6 left-user-registration p-5">
+      <h3 class="text-center text-white">The best online shopping experience.</h3>
+      <h1 class="text-center text-white">Create An Account</h1>
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
           <%= f.input :name %>
-          <%= f.input :name %>
+          <%= f.input :email %>
+          <%= f.input :phone_number %>
+          <%= f.input :password %>
+          <%= f.input :password_confirmation %>
+          <%= f.button :submit, "Create Account", class: "create-new-user-button" %>
+      <% end %>
+      <%= render "devise/shared/links" %>
+    </div>
 
-
-        <div class="field">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :phone_number %><br />
-          <%= f.telephone_field :phone_number, autofocus: true, autocomplete: "email", class: "form-control" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :password %>
-          <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
-          <% end %><br />
-          <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
-        </div>
-
-      <div class="field">
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
-      </div>
-
-      <div class="actions">
-        <%= f.submit "Sign up" %>
-      </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+    <div class="col-md-6 right-user-registration text-center p-5">
+      <h1 class="mt-5">Sign In With Social media</h1>
+      <button type="submit" class="btn facebook-button mt-5">Sign In with facebook</button>
     </div>
   </div>
   
