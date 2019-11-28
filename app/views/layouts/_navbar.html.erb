@@ -23,6 +23,16 @@
                 <span class="navbar-toggler-icon bg-dark"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
+              <% if user_signed_in? %>
+                <div id="search-form-nav-div">
+                  <%= simple_form_for :search, url: search_results_path, method: "GET", html: { class: "form-inline text-center" } do |f| %>
+
+                        <%= f.input :search, label: false %>
+                        <%= f.submit "Search", id: "navbar-search-button", class: "btn"%>
+                    <% end %>
+                  </div>
+                <% end %>
+
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
                         <%= link_to "Home", root_path, class: "nav-link text-dark" %>

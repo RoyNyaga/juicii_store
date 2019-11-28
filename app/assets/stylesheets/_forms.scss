@@ -74,3 +74,40 @@
 
 /*######################### end of user sign form ##########################*/
 
+/*######################### navbar search form #################*/
+
+#search-form-nav-div {
+    margin-left: 130px;
+}
+
+#navbar-search-button {
+    border-right: 2px solid #a9740c;
+    border-top: 2px solid #a9740c;
+    border-bottom: 2px solid #a9740c;
+    padding: 1px;
+    background: #f7a810;
+    border-radius: 0px;
+    border-radius: 10px;
+}
+
+#search_search {
+    padding: 0px;
+    height: 29px;
+    border-radius: 0px;
+    border-left: 2px solid #a9740c;
+    border-top: 2px solid #a9740c;
+    border-bottom: 2px solid #a9740c;
+    border-radius: 10px;
+
+}
+
+#navbar-search-button:hover {
+    background: white;
+    border-right: 2px solid #f7a810;
+    border-top: 2px solid #f7a810;
+    border-bottom: 2px solid #f7a810;
+    color: #f7a810;
+    font-weight: 700;
+}
+
+
