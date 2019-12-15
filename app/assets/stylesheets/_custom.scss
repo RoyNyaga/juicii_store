@@ -118,3 +118,79 @@
 }
 /*end client*/
 
+/*####################### Card start ###################*/
+
+
+#inner-card {
+    border: 2px solid #a9740c;
+    padding: 5px;
+    border-radius: 10px;
+    background: #e2d9bc;
+}
+
+.card-division {
+    background: #a9740c;
+    height: 3px;
+}
+
+.cart-show {
+    background: #343a40;   
+}
+
+#keep-shoping-link {
+    border: 1px solid #f7a810;
+    font-weight: 700;
+    color: #f7a810;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+#keep-shoping-link:hover {
+    background: transparent;
+    border: 1px solid #f7a810;
+    color: white;
+    text-decoration: none;
+}
+
+#remove-item-button {
+    background: #343a40;
+    border: 1px solid #f7a810;
+    font-weight: 700;
+    color: #f7a810;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    padding: 5px;
+    display: inline-block;
+}
+
+#remove-item-button:hover {
+    background: transparent;
+    border: 1px solid #f7a810;
+    color: red;
+    text-decoration: none;
+    border: 1px solid red;
+}
+
+.payment-method-div-content {
+    width: 30%;
+    display: inline-block;
+}
+
+.payment-photo {
+    width: 100%;
+}
+
+#paywith-text {
+    border: 1px solid #f7a810;
+    color: #f7a810;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+
+
+/*####################### Card end ###################*/
+
+

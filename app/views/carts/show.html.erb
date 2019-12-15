@@ -1,40 +1,48 @@
 
 <%= render "layouts/flash_messages" %>
 
-<div class="container cart-show container">
+<div class="container-fluid cart-show">
 	<div class="row justify-content-center">
-		<%= link_to 'Keep Shopping', products_path %>
+		<%= link_to 'Keep Shopping', products_path, id: "keep-shoping-link" %>
 	</div>
 	
-	<% @cart.line_items.each do |line_item| %>
-	<div class="row cart-show-row-grid">
-		<div class="col-md-2 col-sm-4 mx-auto bg-danger">
-			<h4 class="d-inline d-sm-block">product name<span class="d-sm-none"> : : </span></h4>
-			<p class="d-inline d-sm-block"><%= line_item.product.title %></p>
-		</div>
-		<div class="col-md-3 col-sm-4 mx-auto">
-			<h4 class="d-inline d-sm-block">Product photo</h4>
-			<%= image_tag(line_item.product.photo_link, style: "width: 100px;") %>
-		</div>
-		<div class="col-md-2 col-sm-4 mx-auto">
-			<h4 class="d-inline d-sm-block">quantity</h4>
-			<p class="d-inline d-sm-block"><%= line_item.quantity %></p>
-		</div>
-		<div class="col-md-3 col-sm-6 mx-auto">
-			<h4 class="d-inline d-sm-block">amount for quantity</h4>
-			<p class="d-inline d-sm-block"><%= number_to_currency(line_item.total_price) %></p>
-		</div>
-		<div class="col-md-2 col-sm-6 mx-auto">
-			<%= link_to "Remove Item", line_item, method: :delete, data: { confirm: "Are you sure? "}, class: "button is-small mb4" %>
-		</div>
-		
+	<div id="inner-card" class="container">
+			<% @cart.line_items.each do |line_item| %>
+				<div class="row cart-show-row-grid text-center">
+					<div class="col-3 mx-auto test">
+						<h4 class="">Product</h4>
+						<%= image_tag(line_item.product.photo_link, style: "width: 100px;") %>
+						<p class=""><%= line_item.product.title %></p>
+					</div>
+					<div class="col-3 mx-auto test">
+						<h4 class="">quantity</h4>
+						<p class=""><%= line_item.quantity %></p>
+					</div>
+					<div class="col-3 mx-auto test">
+						<h4 class="">amount</h4>
+						<p class=""><%= number_to_currency(line_item.total_price) %></p>
+					</div>
+					<div class="col-3 mx-auto test">
+						<%= link_to "Remove Item", line_item, method: :delete, data: { confirm: "Are you sure? "}, id: "remove-item-button" %>
+					</div>	
+				</div>
+			<div class="card-division"></div>
+		<% end %>
 	</div>
-	<hr>
-	<% end %>
-	<h4> <span>Total:</span><%= number_to_currency(@cart.total_price) %></h4>
-	<%= button_to "Empty Cart", @cart, method: :delete, data: { confirm: "Are you sure? "}, class: "button is-danger" %> 
-	<%= link_to "make payment", new_payment_path %>
+
+	<div class="total-amount-div container d-flex justify-content-between mt-4">
+		<h4 class="text-white"><span>Total : </span><%= @cart.total_price %> frs</h4>
+		<%= button_to "Empty Cart", @cart, method: :delete, data: { confirm: "Are you sure? "}, class: "button is-danger" %> 
+	</div>
+
+	<div class=" container payment-method-div mt-5">
+		<h2 class="payment-method-div-content text-center" id="paywith-text" >Pay With =></h2>
+		<%= link_to image_tag("ci.mtn.mtnmobilemoney.png", class: "payment-photo"), new_payment_path, class: "payment-method-div-content" %>
+		<%= link_to image_tag("orange-money.jpg", class: "payment-photo"), new_payment_path, class: "payment-method-div-content" %>
+	</div>
+
 </div>
+
 
 
 

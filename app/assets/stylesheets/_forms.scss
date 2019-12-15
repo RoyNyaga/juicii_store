@@ -1,3 +1,4 @@
+
 /*######################### registraion form ##########################*/
 .left-user-registration {
 	background: image-url('vita-vilcina-VMLGC5A3QTE-unsplash.jpg')center/cover fixed no-repeat;
@@ -109,5 +110,117 @@
     color: #f7a810;
     font-weight: 700;
 }
+/*######################### navbar search form End #################*/
+
+/*######################### review form #################*/
+#review-form-user-picture {
+    border: 2px solid #a9740c;
+    border-radius: 40%;
+    display: inline-block;
+    width: 100%;
+}
+
+#review-button {
+    background: #f7a810;
+    width: 100px;
+    border: 2px solid #a9740c;
+    padding: 2px;
+    border-radius: 10%;
+}
+
+#review-button:hover {
+    background: white;
+    border: 2px solid #f7a810;
+    color: #f7a810;
+    font-weight: 700;
+}
+
+#review-container {
+    padding-top: 5px;
+    border: 1px solid #a9740c;
+}
+
+.underline {
+    width:200px;
+    height: 5px;
+    margin: 0 auto;
+    background: #a9740c;
+}
+
+.review-post-user-content {
+    border: 2px solid #a9740c;
+}
+
+#review-post-user-picture {
+    border: 2px solid #a9740c;
+    border-radius: 40%;
+    display: inline-block;
+    width: 100%;
+}
+
+.review_content textarea {
+    border: 2px solid #a9740c;
+    background: #e2d9bc;
+    outline: none;
+}
+
+.review_content textarea:focus {
+    outline: none;
+    border: 2px solid #a9740c;
+    box-shadow: none;
+}
+
+.product-review-title {
+    color: #e2d9bc;
+}
+/*######################### review form End #################*/
+
+/*######################### payment #########################*/
+#payment-wrapper {
+    background: #343a40;
+    padding: 10px;
+}
+
+.payment-card {
+    background: #343a40;
+    border: 2px solid #a9740c;
+}
+
+.payment-card-heading {
+    padding: 10px;
+    border-bottom: 2px solid #a9740c;
+    background: #a9740c;
+}
+
+#new_payment .form-group input {
+    border: 2px solid #a9740c;
+    outline: none; 
+}
+
+#new_payment .form-group input:focus {
+    box-shadow: none;
+    outline: none;
+}
 
 
+#payment-button {
+    background: #343a40;
+    border: 1px solid #f7a810;
+    font-weight: 700;
+    color: #f7a810;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    padding: 5px;
+    display: inline-block;
+    width: 95%;
+    font-size: 1.5rem;
+}
+
+#payment-button:hover {
+    background: #e2d9bc;
+    border: 1px solid #f7a810;
+    color: #343a40;
+    text-decoration: none;
+}
+
+/*######################### End payment #########################*/

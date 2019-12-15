@@ -34,6 +34,8 @@
                 <% end %>
 
                 <ul class="navbar-nav ml-auto">
+
+
                     <li class="nav-item active">
                         <%= link_to "Home", root_path, class: "nav-link text-dark" %>
                     </li>
@@ -67,6 +69,18 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="#">Contact</a>
                     </li>
+                    <% if cart_has_items %>
+                    <li class="nav-item active">
+                      <%= link_to cart_path(@cart) do %>
+                        <span class="icon is-small">
+                          <i class="fa fa-shopping-cart"></i>
+                        </span>
+                        <span>Cart
+                          <%= cart_count_over_one %>
+                        </span>
+                      <% end %>
+                    </li>
+                  <% end %>
                     
                 </ul>
             </div>
