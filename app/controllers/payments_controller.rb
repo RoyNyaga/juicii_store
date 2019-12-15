@@ -1,11 +1,14 @@
 class PaymentsController < ApplicationController
 	before_action :authenticate_user!
+	before_action :collect_product_title_and_quantity, only: [:show]
 
 	def index
 		@payments = current_user.payments
 	end 
 
-	def new 
+	def new
+		@payed_products = collect_product_title_and_quantity
+		@cart = Cart.find(session[:cart_id])
 		@payment = Payment.new
 	end
 
@@ -27,6 +30,20 @@ class PaymentsController < ApplicationController
 	def payment_params
 		params.require(:payment).permit(:phone, :amount, :delivery, 
 			:location, :delivery_fees, :account_name, :products, :username)
-	end 
+	end
+
+	def collect_product_title_and_quantity
+		@cart = Cart.find(session[:cart_id])
+		@collection = ""
+		@cart.line_items.each do |line_item|
+			@collection += "#{line_item.quantity} #{line_item.product.title}, "
+
+		end
+		@collection  
+	end
+
+	def collect_amount
+
+	end   
 end
 

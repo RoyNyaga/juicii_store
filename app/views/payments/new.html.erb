@@ -1,13 +1,28 @@
+<div class="container-fluid" id="payment-wrapper">
+	<div class="container">
+		<div class="row text-white my-5">
+			<div class="d-none d-md-block col-md-8">Other stuffs</div>
+			<div class="col-md-4 mx-auto col-10">
+				<div class="card payment-card">
+					<div class="card-heading payment-card-heading text-center">Buy in safety with Juicii</div>
+					<div class="card-body payment-card-body">
+						<%= simple_form_for(@payment) do |f| %>
+							<%= f.input :phone, input_html: { value: "237"} %>
+							<%= f.input :amount, :as => :hidden, :input_html => { :value => @cart.total_price } %>
+							<%= f.input :delivery, collection: ["YES","NO"], hint: "Only for delivery purposes" %>
+							<%= f.input :location, hint: "Only for delivery purposes" %>
 
-<%= simple_form_for(@payment) do |f| %>
-	<%= f.input :phone %>
-	<%= f.input :amount %>
-	<%= f.input :delivery %>
-	<%= f.input :location %>
-	<%= f.input :delivery_fees %>
-	<%= f.input :account_name %>
-	<%= f.input :products %>
-	<%= f.input :username %>
-	<%= f.button :submit, "pay" %>
-<% end %> 
-
+							<%= f.input :delivery_fees, hint: "Only for delivery purposes" %>
+							<%= f.input :account_name, :as => :hidden, :input_html => { :value => current_user.name }%>
+							<%= f.input :products, :as => :hidden, :input_html => { :value => @payed_products } %>
+							<%= f.input :username, :as => :hidden, :input_html => { :value => current_user.name } %>
+							<%= f.button :submit, "pay", id: "payment-button" %>
+						<% end %> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+	

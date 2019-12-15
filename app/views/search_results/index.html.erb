@@ -1,0 +1,15 @@
+<div class="container">
+	<h1>Search a Product</h1>
+	<h2><%= @search_result %> Results Found</h2>
+	<% unless @product_search.empty? %>
+		<% @product_search.each do |product| %>
+			<%= link_to product.title, product %>
+		<% end %>
+	<% end %>
+
+	<% unless @category_search.empty?  %>
+		<% @category_search.each do |category| %>
+			<%= category.category_name %>
+		<% end %>
+	<% end %>
+</div>

@@ -4,6 +4,10 @@ class Product < ApplicationRecord
 	has_many :line_items, dependent: :destroy
 	has_many :reviews, dependent: :destroy
 
+	def self.search(search)
+		all.where("lower(title) LIKE :search", search: "%#{search}%")
+	end 
+
 	private
 
 	def not_referenced_by_any_line_item
