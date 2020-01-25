@@ -1,2 +1,26 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
+<div class="container">
+	<div id="category-wrapper">
+		<h1 class="text-center mt-5 mb-5"><%= @category.category_name %> category</h1>
+		<div class="row">
+		<% @category_products.each do |product| %>
+		      <div class="col-6 col-md-3">
+		        <div class="card general-item-card-body h-100">
+		          <%= link_to image_tag(product.photo_link, class: "card-img-top", alt: "photo here") , product %>
+		          <div class="card-body">
+		            <p class="card-title d-flex justify-content-between">
+		              <a>Add to cart</a> <%= link_to "view", product, class: "view-button" %>
+		            </p>
+		            <%= link_to product.title, product, class: "h5 product-title" %>
+		            <p class="h6">Price: <%= product.price %> CFA</p>
+		          </div>
+		          <div class="card-footer">
+		            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+		          </div>
+		        </div>
+		      </div>
+		    <% end %>
+		</div>
+	</div>
+	
+</div>
+

@@ -4,16 +4,11 @@
 		<div class="col-lg-3 col-md-4 col-sm-10 mx-auto col-11 p-2 user-show-info-col">
 			<h2 class="text-center">Account information <%= current_user.name %></h2>
 			<p class="user-show-info d-flex justify-content-between" id="user-show-info-name">
-				<%= current_user.name %><span class="view-button">Edit</span>				
+				<%= current_user.name %>				
 			</p>
-			<p class="user-show-info">				
-					<%= simple_form_for(current_user) do |f| %>
-		          	<%= f.input :name, label: false %>
-		          	<%= f.button :submit, "save changes", class: "create-new-user-button" %>
-		      <% end %>
-			</p>
-			<p class="user-show-info d-flex justify-content-between"><%= current_user.email %><span class="view-button">Edit</span></p>
-			<p class="user-show-info d-flex justify-content-between"><%= current_user.phone_number %><span class="view-button">Edit</span></p>
+			<p class="user-show-info d-flex justify-content-between"><%= current_user.email %></p>
+			<p class="user-show-info d-flex justify-content-between"><%= current_user.phone_number %></p>
+			<%=link_to "Edit account", edit_user_path(current_user), class: "view-button" %>
 		</div>
 
 		<div class="d-none d-lg-block col-md-9 user-show-transaction-col">

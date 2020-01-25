@@ -2,12 +2,16 @@ class UsersController < ApplicationController
 
 	def show
 		@user_transactions = current_user.payments
-	end 
+	end
+
+	def edit
+    	@user = current_user
+  	end 
 
   	def update
     	@user = current_user
 	    if @user.update_attributes(update_params)
-	      flash[:success] = "Profile updated"
+	      flash[:success] = "Profile successfully updated"
 	      redirect_to @user
 	    else
 	      render 'edit'
