@@ -17,3 +17,9 @@
 //= require turbolinks
 //= require_tree .
 
+var btn = document.querySelector('.view-button')
+console.log(btn)
+
+window.onload = function () {
+  console.log('how are you')
+}
