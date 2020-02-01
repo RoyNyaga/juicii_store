@@ -13,12 +13,30 @@ class PaymentsController < ApplicationController
 	end
 
 	def create
+		@buea = 1000
+		@tiko = 1500
+		@limbe = 2000
 		@payment = current_user.payments.new(payment_params)
+		@amount = @payment.amount
+		@fees = 0
+		if @payment.town == "Buea"
+			@amount += @buea
+			@fees = @buea
+		elsif @payment.town == "Tiko"
+			@amount += @tiko
+			@fees = @tiko
+		elsif @payment.town == "Limbe"
+			@amount += @limbe
+			@fees = @limbe
+		end
+
 		if @payment.valid?
-			# Transaction.pay(@payment.phone, @payment.amount)
+			# Transaction.pay(@payment.phone, @amount)
+			@payment.amount = @amount
+			@payment.delivery_fees = @fees
 			@payment.save
-			flash[:notice] = "dial *126# to accept payment"
-			redirect_to payments_path
+			flash[:notice] = "#{@amount}"
+			redirect_to current_user
 		else
 			flash[:info] = "please enter a correct phone number and a valid amount"
 			render "payments/new"
@@ -28,7 +46,7 @@ class PaymentsController < ApplicationController
 	private
 
 	def payment_params
-		params.require(:payment).permit(:phone, :amount, :delivery, 
+		params.require(:payment).permit(:phone, :amount, :delivery, :town, 
 			:location, :delivery_fees, :account_name, :products, :username)
 	end
 

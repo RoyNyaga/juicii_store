@@ -1,5 +1,4 @@
 
-<%= render "layouts/flash_messages" %>
 <div class="container-fluid">
   <div class="row bg-dark">
     <div class="col-md-6 session p-5">
@@ -11,6 +10,7 @@
           <%= f.input :email %>
           <%= f.input :password %>
           <%= f.button :submit, "Log In", class: "create-new-user-button" %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       <% end %>
       <%= render "devise/shared/links" %>
     </div>
@@ -20,6 +20,5 @@
       <button type="submit" class="btn facebook-button mt-5">Sign In with facebook</button>
     </div>
   </div>
-  
 </div>
 

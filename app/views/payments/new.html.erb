@@ -1,7 +1,50 @@
 <div class="container-fluid" id="payment-wrapper">
 	<div class="container">
 		<div class="row text-white my-5">
-			<div class="d-none d-md-block col-md-8">Other stuffs</div>
+			<div class="col-md-8">
+				<h2 class="text-center">Cost of Delivery</h2>
+				<table class="table text-white">
+				  <thead>
+				    <tr>
+				      <th scope="col">#</th>
+				      <th scope="col">Town</th>
+				      <th scope="col">Cost</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th scope="row">1</th>
+				      <td>Buea</td>
+				      <td>1000frs</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">2</th>
+				      <td>Tiko</td>
+				      <td>1500frs</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">3</th>
+				      <td>Limbe</td>
+				      <td>2000frs</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">3</th>
+				      <td>Kumba</td>
+				      <td>2000frs</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">3</th>
+				      <td>Muyuka</td>
+				      <td>1500frs</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">3</th>
+				      <td>Bamenda</td>
+				      <td>3000frs</td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
 			<div class="col-md-4 mx-auto col-10">
 				<div class="card payment-card">
 					<div class="card-heading payment-card-heading text-center">Buy in safety with Juicii</div>
@@ -10,6 +53,7 @@
 							<%= f.input :phone, input_html: { value: "237"} %>
 							<%= f.input :amount, :as => :hidden, :input_html => { :value => @cart.total_price } %>
 							<%= f.input :delivery, collection: ["YES","NO"], hint: "Only for delivery purposes" %>
+							<%= f.input :town, collection: ["Buea","Tiko","Limbe","Kumba", "Moyuka", "Bamenda"], hint: "Only for delivery purposes" %>
 							<%= f.input :location, hint: "Only for delivery purposes" %>
 
 							<%= f.input :delivery_fees, hint: "Only for delivery purposes" %>
