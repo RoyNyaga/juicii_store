@@ -21,7 +21,7 @@
 
     <div class="col-md-6 d-md-none d-none d-md-block d-lg-block d-xl-block right-user-registration text-center p-5">
       <h1 class="mt-5">Sign In With Social media</h1>
-      <button type="submit" class="btn facebook-button mt-5">Sign In with facebook</button>
+      <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, class: "btn facebook-button mt-5" %>
     </div>
   </div>
   

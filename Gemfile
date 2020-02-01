@@ -79,4 +79,5 @@ gem 'font_awesome5_rails'
 
 gem 'httparty', '~> 0.17.1'
 gem 'simple_form', '~> 5.0', '>= 5.0.1'
+gem 'omniauth-facebook', '~> 5.0'
 
