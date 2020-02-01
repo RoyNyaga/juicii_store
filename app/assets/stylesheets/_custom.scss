@@ -116,6 +116,11 @@
 .client-photo {
     width: 100px;
 }
+
+.general-item-card-body {
+    background: #e2d9bc;
+    border: 2px solid #6e6f73;
+}
 /*end client*/
 
 /*####################### Card start ###################*/
@@ -188,9 +193,79 @@
     font-weight: 700;
 }
 
-
-
-
 /*####################### Card end ###################*/
 
+/*####################### search pages ###################*/
 
+.view-button {
+    background: #343a40;
+    border: 1px solid #f7a810;
+    font-weight: 700;
+    color: #f7a810;
+    padding: 5px;
+}
+
+.view-button:hover {
+    background: transparent;
+    text-decoration: none;
+    color: #343a40;
+    border: 1px solid #343a40;
+}
+
+.product-title {
+    color: #343a40;
+    padding-top: 3px;
+}
+
+.product-title:hover {
+    color: #343a40;
+}
+
+.category-list-group {
+    box-shadow: 5px 10px 10px black;
+}
+
+.product-list-group {
+    box-shadow: 10px 10px 10px black;
+}
+
+.first-list-child {
+    background: #343a40;
+    border-radius: 0;
+    color: #f7a810;
+}
+
+.other-list-group-item {
+    background: #e2d9bc;
+}
+
+.catogories-products-link {
+    color: black;
+}
+.catogories-products-link:hover {
+    color: black;
+}
+/*####################### Search pages end ###################*/
+
+/*############### User pages ###########*/
+ .user-show-info-col {
+    background: #e2d9bc;
+ }
+
+ .user-show-transaction-col {
+ background: #f3f1ee;
+ border-left: 2px solid black;
+ }
+
+#edit-form-wrapper{
+    height: 80vh;
+    background: #e2d9bc;
+}
+
+ /*############### End ###########*/
+
+ #new_user #error_explanation {
+    color: red;
+ }
+
+ 

@@ -1,0 +1,15 @@
+
+<div class="row" id="edit-form-wrapper">
+  <div class="col-10 col-sm-5 mx-auto" id="edit-form-div">
+    <h3 class="mb-5 mt-5 text-center">Edit your personal information bellow</h3>
+    <%= simple_form_for(current_user) do |f| %>
+                <%= f.input :name %>
+                <%= f.input :email %>
+                <%= f.input :phone_number %>
+                <%= f.button :submit, "save changes", class: "create-new-user-button" %>
+          <% end %>
+    
+  </div>
+</div>
+        
+

@@ -1,22 +1,24 @@
 
-<%= render "layouts/flash_messages" %>
 <div class="container-fluid">
   <div class="row bg-dark">
     <div class="col-md-6 session p-5">
       <h1 class="text-center text-white">Log in</h1>
+      <div class="text-center d-lg-none d-xl-none d-md-none mb-0 mt-5">
+        <button type="submit" class="btn facebook-button">Log In With Facebook</button>
+      </div>
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <%= f.input :email %>
           <%= f.input :password %>
           <%= f.button :submit, "Log In", class: "create-new-user-button" %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       <% end %>
       <%= render "devise/shared/links" %>
     </div>
 
-    <div class="col-md-6 right-user-session text-center p-5">
+    <div class="col-md-6 d-none d-md-block d-lg-block d-xl-block right-user-session text-center p-5">
       <h1 class="mt-5 text-white">Sign In With Social media</h1>
       <button type="submit" class="btn facebook-button mt-5">Sign In with facebook</button>
     </div>
   </div>
-  
 </div>
 

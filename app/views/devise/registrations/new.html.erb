@@ -4,6 +4,9 @@
     <div class="col-md-6 left-user-registration p-5">
       <h3 class="text-center text-white">The best online shopping experience.</h3>
       <h1 class="text-center text-white">Create An Account</h1>
+    <div class="text-center d-md-none d-lg-none d-xl-none">
+      <button type="submit" class="btn facebook-button mt-5">Sign In with facebook</button>
+    </div>
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
           <%= f.input :name %>
@@ -16,7 +19,7 @@
       <%= render "devise/shared/links" %>
     </div>
 
-    <div class="col-md-6 right-user-registration text-center p-5">
+    <div class="col-md-6 d-md-none d-none d-md-block d-lg-block d-xl-block right-user-registration text-center p-5">
       <h1 class="mt-5">Sign In With Social media</h1>
       <button type="submit" class="btn facebook-button mt-5">Sign In with facebook</button>
     </div>

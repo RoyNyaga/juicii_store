@@ -7,6 +7,9 @@ class ReviewsController < InheritedResources::Base
 		if @review.save
 			flash[:success] = "Thanks for the review #{current_user.name} and happy shopping"
 			redirect_back(fallback_location: @review.product)
+		else
+			flash[:alert] = "Review form can't be submited while empty"
+			redirect_back(fallback_location: @review.product)
 		end
 	end
 
