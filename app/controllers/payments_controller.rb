@@ -19,6 +19,21 @@ class PaymentsController < ApplicationController
 		@payment = current_user.payments.new(payment_params)
 		@amount = @payment.amount
 		@fees = 0
+		mtn = ["237651","237651", "237652", "237653",
+			"237654", "237670", "237671", "237672", 
+			"237673", "237674","237675", "237676", 
+			"237677", "237678", "237679", "237680", "237681", 
+			"237682", "237683", "237684", "237685", "237686", "237687", 
+			"237688", "237689"]
+		orange = ["237655", "237656", "237657", "237658", 
+			"237659", "237690", "237691", "237692", 
+			"237693", "237694", "237695","237696", "237697", 
+			"237698", "237699"]
+		nextel = ["237660", "237661", "237662", "237663", 
+			"237664", "237665", "237666", "237667", "237668", 
+			"237669"]
+		camtel = ["237222", "237233", "237242", "237243"]
+		
 		if @payment.town == "Buea"
 			@amount += @buea
 			@fees = @buea
@@ -35,10 +50,22 @@ class PaymentsController < ApplicationController
 			@payment.amount = @amount
 			@payment.delivery_fees = @fees
 			@payment.save
-			flash[:notice] = "#{@amount}"
-			redirect_to current_user
+			number_type = @payment.phone.slice(0,6)
+			if mtn.include?(number_type)
+				flash[:success] = "You will receive a request confirmation message from MTN in some few seconds if not dial *126# to validate payment"
+				redirect_to current_user
+			elsif orange.include?(number_type) 
+				flash[:success] = "You will receive a request confirmation message from Orange in some few seconds if not dial --- to validate payment"
+				redirect_to current_user
+			elsif camtel.include?(number_type)
+				flash[:danger] = "Nextel payments not allowed"
+				redirect_to current_user
+			elsif
+				flash[:danger] = "Camtel payments not allowed"
+				redirect_to current_user
+			end  
 		else
-			flash[:info] = "please enter a correct phone number and a valid amount"
+			flash[:danger] = "Invalide Phone Number, enter phone number with no spaces ex: 237682879062"
 			render "payments/new"
 		end
 	end  
