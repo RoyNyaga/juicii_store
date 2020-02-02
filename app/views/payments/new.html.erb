@@ -27,7 +27,7 @@
 				      <td>Limbe</td>
 				      <td>2000frs</td>
 				    </tr>
-				    <tr>
+				    <tr> 
 				      <th scope="row">3</th>
 				      <td>Kumba</td>
 				      <td>2000frs</td>
@@ -50,7 +50,8 @@
 					<div class="card-heading payment-card-heading text-center">Buy in safety with Juicii</div>
 					<div class="card-body payment-card-body">
 						<%= simple_form_for(@payment) do |f| %>
-							<%= f.input :phone, input_html: { value: "237"} %>
+							<%= f.error_notification %>
+							<%= f.input :phone, input_html: { value: "237"}, hint: "There should be no spaces example 237617780276" %>
 							<%= f.input :amount, :as => :hidden, :input_html => { :value => @cart.total_price } %>
 							<%= f.input :delivery, collection: ["YES","NO"], hint: "Only for delivery purposes" %>
 							<%= f.input :town, collection: ["Buea","Tiko","Limbe","Kumba", "Moyuka", "Bamenda"], hint: "Only for delivery purposes" %>
