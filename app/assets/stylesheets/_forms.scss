@@ -47,7 +47,7 @@
 }
 
 .right-user-registration {
-	background: image-url("aroma-assorted-bathroom-965990.jpg")center/cover no-repeat fixed;
+	background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url("https://res.cloudinary.com/it-s-tech/image/upload/v1580598782/20200131_234048_0000_wxtuz5.png")center/cover no-repeat fixed;
 }
 
 .facebook-button {
@@ -149,7 +149,7 @@
     border: 2px solid #a9740c;
 }
 
-#review-post-user-picture {
+.review-post-user-picture {
     border: 2px solid #a9740c;
     border-radius: 40%;
     display: inline-block;
