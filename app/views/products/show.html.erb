@@ -34,7 +34,11 @@
        <% if current_user %>
       <div class="row mt-5 mb-4" style="width: 100%;">
         <div class="col-md-1 col-3">
-          <%= image_tag("hero_2.jpg", id: "review-form-user-picture", class: "mt-3 ml-3") %>
+          <% unless current_user.image == nil %>
+             <%= image_tag(current_user.image, id: "review-form-user-picture", class: "mt-3 ml-3") %>
+            <% else %>
+            <%= image_tag("https://res.cloudinary.com/it-s-tech/image/upload/v1580598779/20200131_232003_0000_nuovas.png", id: "review-form-user-picture", class: "mt-3 ml-3") %>
+          <% end %>
         </div>
         <div class="col-md-6 col-9">
           <%= render 'reviews/form', review: @review %>
@@ -44,10 +48,13 @@
       <% end %>
 
         <% @reviews.each do |review| %>
-        <div class="row mb-4" style="width: 100%;">
-                
+        <div class="row mb-4" style="width: 100%;">              
            <div class="col-md-2 col-3 text-center">
-            <%= image_tag("hero_2.jpg", id: "review-post-user-picture") %>
+            <% unless review.user.image == nil %>
+             <%= image_tag(review.user.image, class: "review-post-user-picture") %>
+            <% else %>
+            <%= image_tag("https://res.cloudinary.com/it-s-tech/image/upload/v1580598779/20200131_232003_0000_nuovas.png", class: "review-post-user-picture") %>
+          <% end %>
             <%= review.user.name %>
           </div>
           <div class="col-md-5 col-9 review-post-user-content">
