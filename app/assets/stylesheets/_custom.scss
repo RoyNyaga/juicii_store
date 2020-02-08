@@ -300,4 +300,22 @@
     color: #f7a810;
  }
 
+#jumbotron-about-pic{
+    width: 100%;
+}
 
+.jumbotron{
+   height: 50vh;
+   background: url("https://res.cloudinary.com/it-s-tech/image/upload/v1580598782/20200131_234048_0000_wxtuz5.png")center/cover fixed no-repeat;
+}
+
+.team-pic{
+    height: 200px;
+    width: 200px
+
+}
+
+#about-team-heading {
+    color: #f7a810;
+    background: #343a40;
+}

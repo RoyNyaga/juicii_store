@@ -222,3 +222,57 @@
 }
 
 /*######################### End payment #########################*/
+
+/*################## Message Form ###########*/
+.contact-card{
+    flex: 0 0 80%;
+    padding: 40px 0;
+    background: rgba(0,0,0,0.6); /*transparent black*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    flex: 0 0 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+form input{
+    margin: 10px 0;
+}
+
+form h3{
+    text-align: center;
+    text-transform: uppercase;
+    color: #ad343e;
+}
+
+form input,
+form textarea{
+    padding: 5px;
+    border: 3px solid #ad343e;
+}
+
+input::placehoder,
+textarea::placehoder{
+    text-transform: uppercase;
+    color: #0d1317;
+}
+
+.form-btn{
+    margin: 20px;
+    font-size: 20px;
+    border-radius: 40px;
+    padding: 5px;
+    background: #ad343e;
+    transition: color 1s ease-in-out, background 1s ease-in-out;
+}
+
+.form-btn:hover {
+    color: #ad343e;
+    background: #f5f3f5;
+}
+
+/*################## Message Form end ###########*/

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get '/about', to: "static_pages#about"
+  get '/services', to: "static_pages#services"
+  get '/contact', to: "static_pages#contact"
   resources :categories, only: [:show]
   resources :reviews
   resources :line_items
@@ -19,5 +22,6 @@ Rails.application.routes.draw do
   resources :payments
   resources :search_results, only: [:index]
   resources :users
+  resources :messages, only: [:create]
 
 end

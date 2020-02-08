@@ -1,0 +1,49 @@
+<section id="about-section-wrapper" class="bg-daner">
+	<div class="jumbotron">
+	</div>
+
+		<div class="row mt-5">
+			<div class="col-md-10 mx-auto">
+				<h1 class="text-center my-3 p-3" id="about-team-heading">In case of any worry or doubt, please leave us a message</h1>
+			</div>
+			
+			<div class="col-md-6">
+				<div class="d-flex ml-3">
+					<div class="">
+						<img class="team-pic" src="https://res.cloudinary.com/it-s-tech/image/upload/v1580598781/20200123_080406_0000_xwzpuy.png">
+					</div>
+					<div class="card-body">
+						<div class="social-media-icons-div">
+			                <ul>
+			                    <li><a class="social-media-icons" href="https://www.facebook.com/JuiciiEnterprise/" target="_blank">Facebook<i class="fab fa-facebook fa-2x"></i></a></li>
+			                    <li><a class="social-media-icons" href="https://www.instagram.com/juicii_enterprise/" class="footer-icon" target="_blank">Instagram<i class="fab fa-instagram fa-2x"></i></a></li>
+			                </ul>
+			            </div>
+			            <div>
+			                <ul>
+			                    <li><a href="#" class="first-layer-contact"><i class ="fa fa-phone right-icons"></i><span class="d-none d-md-inline">+237672359428</span></a></li>
+			                    <li><a href="#" class="first-layer-contact"><i class ="fa fa-phone right-icons"></i><span class="d-none d-md-inline">+237650757572</span></a></li>
+			                    <li><a href="#" class="first-layer-contact"><i class="fa fa-envelope right-icons"></i><span class="d-none d-md-inline">juiciienterprise@gmail.com</span></a></li>
+			                </ul>
+			            </div>
+					</div>					
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div id="contact-link" class="contact">
+					<article class="contact-card">
+						<form accept-charset="UTF-8" action="<%=messages_path %>" method="POST">
+							<h3>Leave us a message</h3>
+							<input name="message[name]" type="text" id="name" placeholder="Your name" required>
+							<input name="message[email]" type="email" id="email" placeholder="Your email" required>
+							<textarea name="message[message]" id="" cols="30" rows="10" placeholder="leave a comment" required></textarea>
+							<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+							<button type="submit" class="form-btn">Submit</button>
+						</form>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

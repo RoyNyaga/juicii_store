@@ -8,8 +8,9 @@
             </div>
             <div id="first-layer-contact-div">
                 <ul>
-                    <li><a href="#" class="first-layer-contact"><i class="fa fa-envelope right-icons"></i><span class="d-none d-md-inline">671172775</span></a></li>
-                    <li><a href="#" class="first-layer-contact"><i class ="fa fa-phone right-icons"></i><span class="d-none d-md-inline">nyagaandreroy@gmail.com</span></a></li>
+                    <li><a href="#" class="first-layer-contact"><i class ="fa fa-phone right-icons"></i><span class="d-none d-md-inline">+237672359428</span></a></li>
+                    <li><a href="#" class="first-layer-contact"><i class ="fa fa-phone right-icons"></i><span class="d-none d-md-inline">+237650757572</span></a></li>
+                    <li><a href="#" class="first-layer-contact"><i class="fa fa-envelope right-icons"></i><span class="d-none d-md-inline">juiciienterprise@gmail.com</span></a></li>
                 </ul>
             </div>
         </div>
@@ -64,13 +65,13 @@
                     </li>
                     <% end %>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">About</a>
+                        <%= link_to("About", about_path, class: "nav-link text-dark") %>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">Services</a>
+                        <%= link_to("Services", services_path, class: "nav-link text-dark") %>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">Contact</a>
+                        <%= link_to("Contact", contact_path, class: "nav-link text-dark") %>
                     </li>
                     <% if cart_has_items %>
                     <li class="nav-item active">
