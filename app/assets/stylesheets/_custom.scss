@@ -319,3 +319,20 @@
     color: #f7a810;
     background: #343a40;
 }
+
+.product-image {
+    width: 50%;
+}
+
+.product-page-links{
+    background: #343a40;
+    color: #f7a810;
+    padding: 2px;
+}
+
+.product-page-links:hover {
+    background: transparent;
+    color: black;
+    padding: 2px;
+    text-decoration: none;
+}
