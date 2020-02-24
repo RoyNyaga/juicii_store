@@ -1,5 +1,5 @@
 ActiveAdmin.register Category do
 
-  permit_params :category_name, :photos
+  permit_params :name, :photos
   
 end
