@@ -5,7 +5,7 @@
 			<div class="list-group category-list-group">
 				<li class="list-group-item text-center font-wieht-bold h3 first-list-child">Categories</li>
 				<% @categories.each do |category| %>
-					<li class="list-group-item other-list-group-item"><%= link_to category.category_name, category, class: "catogories-products-link" %></li>
+					<li class="list-group-item other-list-group-item"><%= link_to category.name, category, class: "catogories-products-link" %></li>
 				<% end %>
 			</div>
 		</div>
@@ -42,7 +42,7 @@
 				          		<%= link_to image_tag(category.photos, class: "card-img-top", alt: "photo here") , category %>
 					          	<div class="card-body">
 						            <p class="card-title d-flex justify-content-between">
-						              <%= link_to category.category_name, category, class: "h5 product-title" %> <%= link_to "#{category.products.count} products", category, class: "view-button" %>
+						              <%= link_to category.name, category, class: "h5 product-title" %> <%= link_to "#{category.products.count} products", category, class: "view-button" %>
 						            </p>
 					          	</div>
 				        	</div>

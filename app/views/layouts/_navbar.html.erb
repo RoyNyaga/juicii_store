@@ -42,7 +42,7 @@
                         <a class="nav-link dropdown-toggle text-dark" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product category</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
                             <% list_category.each do |category| %>
-                                <%= link_to category.category_name, category, class: "h5 p-3" %><br/>
+                                <%= link_to category.name, category, class: "h5 p-3" %><br/>
                             <% end %>
                            
                             
