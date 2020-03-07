@@ -1,0 +1,79 @@
+<div class="container-fluid">
+	<div class="row mt-5" id="test">
+
+		<div class="col-lg-3 col-md-4 col-sm-10 mx-auto col-11 p-2 user-show-info-col">
+			<h2 class="text-center">Account information <%= current_user.name %></h2>
+			<p class="user-show-info d-flex justify-content-between" id="user-show-info-name">
+				<%= current_user.name %>				
+			</p>
+			<p class="user-show-info d-flex justify-content-between"><%= current_user.email %></p>
+			<p class="user-show-info d-flex justify-content-between"><%= current_user.phone_number %></p>
+			<%=link_to "Edit account", edit_user_path(current_user), class: "view-button" %>
+		</div>
+
+		<div class="d-none d-lg-block col-md-9 user-show-transaction-col">
+			<h2 class="text-center">Transactions</h2>
+			<table class="table table-inverse">
+				
+				<thead>
+					<tr>
+						<th>Phone</th>
+						<th>Products</th>
+						<th>Delivery</th>
+						<th>Delivery fee</th>
+						<th>Amount</th>
+						<th>Date</th>
+						<th>Payment status</th>
+						<th>Delivered</th>
+					</tr>
+				</thead>
+				<% @user_transactions.each do |trans| %>
+				<tbody>
+					<tr>
+						<td><%= trans.phone %></td>
+						<td><%= trans.products %></td>
+						<td><%= trans.delivery %></td>
+						<td><%= trans.delivery_fees %></td>
+						<td><%= trans.amount %></td>
+						<td><%= trans.created_at %></td>
+						<td>pending</td>
+						<td>yes</td>
+					</tr>
+				</tbody>
+				<% end %>
+
+			</table>
+		</div>
+
+		<div class="d-xl-none d-lg-none col-md-8 col-sm-10 col-11 mx-auto">
+			<h2 class="text-center mt-5 mb-3">Transactions</h2>
+			<div class="row">
+				<% @user_transactions.each do |trans| %>
+				<div class="col-md-6">			
+					<div class="card mb-3 d-xl-none d-lg-none ">
+						<div class="card-body user-show-info-col">
+							<p class="card-text"><span>Phone: </span><%= trans.phone %></p>
+							<p class="card-text"><span>Products: </span><%= trans.products %></p>
+							<p class="card-text"><span>Delivery: </span><%= trans.delivery %></p>
+							<p class="card-text"><span>Delivery fee: </span><%= trans.delivery_fees %></p>
+							<p class="card-text"><span>Amount: </span><%= trans.amount %></p>
+							<p class="card-text"><span>Payment status: </span> pending</p>
+							<p class="card-text"><span>Delivered: </span> Yes</p>
+						</div>
+						<div class="card-footer">
+					        <small class="text-muted h5"><%= trans.created_at %></small>
+				      	</div>
+					</div>			
+				</div>
+				<% end %>
+
+			</div>
+			
+
+			
+		</div>
+		
+	</div>
+	
+</div>
+

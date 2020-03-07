@@ -1,0 +1,48 @@
+
+<div class="container-fluid cart-show">
+	<div class="row justify-content-center">
+		<%= link_to 'Keep Shopping', products_path, id: "keep-shoping-link" %>
+	</div>
+	
+	<div id="inner-card" class="container">
+			<% @cart.line_items.each do |line_item| %>
+				<div class="row cart-show-row-grid text-center">
+					<div class="col-3 mx-auto test">
+						<h4 class="">Product</h4>
+						<%= image_tag(line_item.product.photo_link, style: "width: 100px;") %>
+						<p class=""><%= line_item.product.title %></p>
+					</div>
+					<div class="col-3 mx-auto test">
+						<h4 class="">quantity</h4>
+						<p class=""><%= line_item.quantity %></p>
+					</div>
+					<div class="col-3 mx-auto test">
+						<h4 class="">amount</h4>
+						<p class=""><%= number_to_currency(line_item.total_price) %></p>
+					</div>
+					<div class="col-3 mx-auto test">
+						<%= link_to "Remove Item", line_item, method: :delete, data: { confirm: "Are you sure? "}, id: "remove-item-button" %>
+					</div>	
+				</div>
+			<div class="card-division"></div>
+		<% end %>
+	</div>
+
+	<div class="total-amount-div container d-flex justify-content-between mt-4">
+		<h4 class="text-white"><span>Total : </span><%= @cart.total_price %> frs</h4>
+		<%= button_to "Empty Cart", @cart, method: :delete, data: { confirm: "Are you sure? "}, class: "button is-danger" %> 
+	</div>
+
+	<div class="container payment-method-div mt-5">
+		<h2 class="payment-method-div-content text-center" id="paywith-text" >Pay With =></h2>
+		<%= link_to image_tag("https://res.cloudinary.com/it-s-tech/image/upload/v1580604458/ci.mtn.mtnmobilemoney_a83fse.jpg", class: "payment-photo"), new_payment_path, class: "payment-method-div-content" %>
+
+		<%= link_to image_tag("https://res.cloudinary.com/it-s-tech/image/upload/v1580604458/orange-money_lquhcg.jpg", class: "payment-photo"),new_payment_path, class: "payment-method-div-content" %>
+	</div>
+
+</div>
+
+
+
+
+

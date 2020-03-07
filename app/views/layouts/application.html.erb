@@ -4,12 +4,17 @@
     <title>JuiciiStore</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Juicii store is an ecommerce platform where you can get all your house hold utilities" %>">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%= render "layouts/navbar" %>
+    <%= render "layouts/flash_messages" %> 
     <%= yield %>
+    <%= render "layouts/footer" %>
   </body>
 </html>

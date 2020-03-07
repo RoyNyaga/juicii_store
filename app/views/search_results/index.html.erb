@@ -1,0 +1,65 @@
+<div class="container-fluid">
+	<h2 class="text-center"><%= @search_result %> Results Found</h2>
+	<div class="row">
+		<div class="d-none d-md-block col-2" id="search-category-section">
+			<div class="list-group category-list-group">
+				<li class="list-group-item text-center font-wieht-bold h3 first-list-child">Categories</li>
+				<% @categories.each do |category| %>
+					<li class="list-group-item other-list-group-item"><%= link_to category.name, category, class: "catogories-products-link" %></li>
+				<% end %>
+			</div>
+		</div>
+		<div class="col-md-8 mx-auto">
+			<div class="row">
+				<% unless @product_search.empty? %>
+					<% @product_search.each do |product| %>
+				      <div class="col-6 col-md-3">
+				        <div class="card general-item-card-body h-100">
+				          <%= link_to image_tag(product.photo_link, class: "card-img-top", alt: "photo here") , product %>
+				          <div class="card-body">
+				            <p class="card-title d-flex justify-content-between">
+				              <a>Add to cart</a> <%= link_to "view", product, class: "view-button" %>
+				            </p>
+				            <%= link_to product.title, product, class: "h5 product-title" %>
+				            <p class="h6">Price: <%= product.price %> CFA</p>
+				          </div>
+				          <div class="card-footer">
+				            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+				          </div>
+				        </div>
+				      </div>
+				    <% end %>
+				<% end %>
+			</div>
+
+			<h3 class="border-bottom mt-5 text-center">Categoies</h3>
+
+			<div class="row mt-5">			
+				<% unless @category_search.empty?  %>
+					<% @category_search.each do |category| %>
+						<div class="col-6 col-md-3">
+							<div class="card general-item-card-body h-100">
+				          		<%= link_to image_tag(category.photos, class: "card-img-top", alt: "photo here") , category %>
+					          	<div class="card-body">
+						            <p class="card-title d-flex justify-content-between">
+						              <%= link_to category.name, category, class: "h5 product-title" %> <%= link_to "#{category.products.count} products", category, class: "view-button" %>
+						            </p>
+					          	</div>
+				        	</div>
+						</div>
+					<% end %>
+				<% end %>
+					
+			</div>
+		</div>
+		<div class="d-none d-md-block col-2" id="search-all-product-section">
+			<ul class="list-group product-list-group">
+				<li class="list-group-item text-center font-wieht-bold h3 first-list-child">All products</li>
+				<% @products.each do |product| %>
+					<li class="list-group-item other-list-group-item"><%= link_to product.title, product, class: "catogories-products-link" %></li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,37 @@
+
+<%= render "layouts/header" %>
+<section id="our-products">
+    <div class="container my-5">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-md-6 text-center our-products-written-content">
+                <h3 class="our-products-sub-title">Popular Products</h3>
+                <h2 class="our-products-title mb-3">Our Products</h2>
+                <p class="our-products-intro">The best shopping experience</p>
+            </div>
+        </div>      
+        <div class="row">
+        	<% @products.each do |product| %>
+          <div class="col-lg-3 col-6 col-md-4 mb-4">
+            <div class="card h-100">
+              <%= link_to image_tag(product.photo_link, class: "card-img-top", alt: "photo here") , product %>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <%= link_to product.title, product, class: "product-page-links" %>
+                </h4>
+                <h5>Price: <%= product.price %> CFA</h5>
+              </div>
+              <div class="card-footer d-flex justify-content-between">
+                <%= link_to "View", product, class: "product-page-links" %>
+                <% if product.availability == true %>
+                  <span class="badge badge-pill badge-info">Available</span>
+                  <% else %>
+                  <span class="badge badge-pill badge-danger">Finished</span>
+                  <a>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        </div>
+    </div>       
+</section>

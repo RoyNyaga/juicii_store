@@ -1,0 +1,338 @@
+
+/*######################### header ##########################*/
+/*first-layer-section*/
+
+#first-header-section {
+    padding: 10px;
+    background: #f8f9fa;
+}
+.first-header-section-div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.social-media-icons-div ul {
+    list-style: none;
+    padding: 0px;
+    
+}
+
+.social-media-icons-div ul li {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 0.7em;
+}
+
+.social-media-icons-div ul li a {
+    color: white;
+    padding: 9px;
+    border: 1px solid black;
+    background: black;
+    border-radius: 100%;
+}
+.social-media-icons-div ul li a:hover {
+    color: #f16821;
+}
+
+#first-layer-contact-div ul {
+    list-style: none;
+}
+
+#first-layer-contact-div ul li{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#first-layer-contact-div ul li a {
+    color: #f16821;
+    text-decoration: none;
+}
+
+#first-layer-contact-div ul li a:hover .right-icons {
+    color: #7b2e06;
+}
+
+#first-layer-contact-div ul li a span {
+    color: black;
+    padding-left: 5px;
+}
+
+/*navbar##*/
+
+.navbar-brand {
+    font-size: 3em;
+    color: black;
+    width: 25%;
+}
+
+#logo-pic {
+    width: 20%;
+}
+
+#full-stop {
+    color: #f16821;
+}
+
+/*end navbar*/
+
+/*header-third-section*/
+.header-third-layer {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('https://res.cloudinary.com/it-s-tech/image/upload/v1580598780/20200131_233820_0000_mol5xp.png')center/cover fixed no-repeat;
+    color: white;
+}
+
+.header-third-layer-div {
+    height: 100%;
+}
+
+.header-btn {
+    color: white;
+    border: 2px solid white;
+}
+
+.header-btn:hover {
+    background: white;
+}
+
+/*end of header third section*/
+
+/*#######################end of header###################*/
+
+/*################ main start ########################*/
+
+/*our products*/
+
+
+.our-products-sub-title {
+    color: #adb5bd;
+    font-size: 1.2em;
+    font-variant: small-caps
+}
+
+.our-products-intro {
+    color: #adb5bd;
+}
+
+/*end our products*/
+
+/*client*/
+.client-photo {
+    width: 100px;
+}
+
+.general-item-card-body {
+    background: #e2d9bc;
+    border: 2px solid #6e6f73;
+}
+/*end client*/
+
+/*####################### Card start ###################*/
+
+
+#inner-card {
+    border: 2px solid #a9740c;
+    padding: 5px;
+    border-radius: 10px;
+    background: #e2d9bc;
+}
+
+.card-division {
+    background: #a9740c;
+    height: 3px;
+}
+
+.cart-show {
+    background: #343a40;   
+}
+
+#keep-shoping-link {
+    border: 1px solid #f7a810;
+    font-weight: 700;
+    color: #f7a810;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+#keep-shoping-link:hover {
+    background: transparent;
+    border: 1px solid #f7a810;
+    color: white;
+    text-decoration: none;
+}
+
+#remove-item-button {
+    background: #343a40;
+    border: 1px solid #f7a810;
+    font-weight: 700;
+    color: #f7a810;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    padding: 5px;
+    display: inline-block;
+}
+
+#remove-item-button:hover {
+    background: transparent;
+    border: 1px solid #f7a810;
+    color: red;
+    text-decoration: none;
+    border: 1px solid red;
+}
+
+.payment-method-div-content {
+    width: 30%;
+    display: inline-block;
+}
+
+.payment-photo {
+    width: 100%;
+}
+
+#paywith-text {
+    border: 1px solid #f7a810;
+    color: #f7a810;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/*####################### Card end ###################*/
+
+/*####################### search pages ###################*/
+
+.view-button {
+    background: #343a40;
+    border: 1px solid #f7a810;
+    font-weight: 700;
+    color: #f7a810;
+    padding: 5px;
+}
+
+.view-button:hover {
+    background: transparent;
+    text-decoration: none;
+    color: #343a40;
+    border: 1px solid #343a40;
+}
+
+.product-title {
+    color: #343a40;
+    padding-top: 3px;
+}
+
+.product-title:hover {
+    color: #343a40;
+}
+
+.category-list-group {
+    box-shadow: 5px 10px 10px black;
+}
+
+.product-list-group {
+    box-shadow: 10px 10px 10px black;
+}
+
+.first-list-child {
+    background: #343a40;
+    border-radius: 0;
+    color: #f7a810;
+}
+
+.other-list-group-item {
+    background: #e2d9bc;
+}
+
+.catogories-products-link {
+    color: black;
+}
+.catogories-products-link:hover {
+    color: black;
+}
+/*####################### Search pages end ###################*/
+
+/*############### User pages ###########*/
+ .user-show-info-col {
+    background: #e2d9bc;
+ }
+
+ .user-show-transaction-col {
+ background: #f3f1ee;
+ border-left: 2px solid black;
+ }
+
+#edit-form-wrapper{
+    height: 80vh;
+    background: #e2d9bc;
+}
+
+ /*############### End ###########*/
+
+ #new_user #error_explanation {
+    color: red;
+ }
+
+ /*##### footer start ###########*/
+
+ .site-footer {
+    background: #343a40;
+    border-top: 5px solid #f7a810;
+ }
+
+.footer-heading{
+    color: #f7a810;
+ }
+
+ .footer-link {
+    color: #f7a810;
+ }
+
+ .footer-link:hover {
+    color: white;
+ }
+
+ .footer-icon i {
+    color: white;
+ }
+
+ .footer-icon i:hover {
+    color: #f7a810;
+ }
+
+#jumbotron-about-pic{
+    width: 100%;
+}
+
+.jumbotron{
+   height: 50vh;
+   background: url("https://res.cloudinary.com/it-s-tech/image/upload/v1580598782/20200131_234048_0000_wxtuz5.png")center/cover fixed no-repeat;
+}
+
+.team-pic{
+    height: 200px;
+    width: 200px
+
+}
+
+#about-team-heading {
+    color: #f7a810;
+    background: #343a40;
+}
+
+.product-image {
+    width: 50%;
+}
+
+.product-page-links{
+    background: #343a40;
+    color: #f7a810;
+    padding: 2px;
+}
+
+.product-page-links:hover {
+    background: transparent;
+    color: black;
+    padding: 2px;
+    text-decoration: none;
+}

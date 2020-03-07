@@ -1,0 +1,278 @@
+
+/*######################### registraion form ##########################*/
+.left-user-registration {
+	background: black;  
+}
+
+.new_user {
+    margin-top: 100px;
+    border: 2px solid #f7a810;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px #f7a810;
+}
+
+.new_user .form-group input {
+  	background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #f7a810;
+    color: white;
+    font-size: 1.5em;
+}
+
+.new_user .form-group input:focus {
+	background: none;
+   	background: #d4852440;
+    color: white;
+    outline: none;
+}
+
+.new_user .form-group label {
+	color: white;
+	font-size: 1.5em;
+}
+
+.create-new-user-button {
+    background: black;
+    border: 1px solid #f7a810;
+    font-weight: 700;
+    color: #f7a810;
+}
+
+.create-new-user-button:hover {
+    background: transparent;
+    border: 1px solid #f7a810;
+    color: white;
+}
+
+.right-user-registration {
+	background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url("https://res.cloudinary.com/it-s-tech/image/upload/v1580598782/20200131_234048_0000_wxtuz5.png")center/cover no-repeat fixed;
+}
+
+.facebook-button {
+    background: #345eb5;
+    color: white;
+    font-weight: 600;
+    border: 1px solid white;
+    width: 50%;
+    font-size: 1.5em;
+}
+
+.facebook-button:hover {
+    background: white;
+    border: 2px solid #345eb5;
+    color: #345eb5;
+    
+}
+
+/*######################### end of registraion form ##########################*/
+
+/*######################### user sign up form ##########################*/
+
+
+/*######################### end of user sign form ##########################*/
+
+/*######################### navbar search form #################*/
+
+#search-form-nav-div {
+    margin-left: 130px;
+}
+
+#navbar-search-button {
+    border-right: 2px solid #a9740c;
+    border-top: 2px solid #a9740c;
+    border-bottom: 2px solid #a9740c;
+    padding: 1px;
+    background: #f7a810;
+    border-radius: 0px;
+    border-radius: 10px;
+}
+
+#search_search {
+    padding: 0px;
+    height: 29px;
+    border-radius: 0px;
+    border-left: 2px solid #a9740c;
+    border-top: 2px solid #a9740c;
+    border-bottom: 2px solid #a9740c;
+    border-radius: 10px;
+
+}
+
+#navbar-search-button:hover {
+    background: white;
+    border-right: 2px solid #f7a810;
+    border-top: 2px solid #f7a810;
+    border-bottom: 2px solid #f7a810;
+    color: #f7a810;
+    font-weight: 700;
+}
+/*######################### navbar search form End #################*/
+
+/*######################### review form #################*/
+#review-form-user-picture {
+    border: 2px solid #a9740c;
+    border-radius: 40%;
+    display: inline-block;
+    width: 100%;
+}
+
+#review-button {
+    background: #f7a810;
+    width: 100px;
+    border: 2px solid #a9740c;
+    padding: 2px;
+    border-radius: 10%;
+}
+
+#review-button:hover {
+    background: white;
+    border: 2px solid #f7a810;
+    color: #f7a810;
+    font-weight: 700;
+}
+
+#review-container {
+    padding-top: 5px;
+    border: 1px solid #a9740c;
+}
+
+.underline {
+    width:200px;
+    height: 5px;
+    margin: 0 auto;
+    background: #a9740c;
+}
+
+.review-post-user-content {
+    border: 2px solid #a9740c;
+}
+
+.review-post-user-picture {
+    border: 2px solid #a9740c;
+    border-radius: 40%;
+    display: inline-block;
+    width: 100%;
+}
+
+.review_content textarea {
+    border: 2px solid #a9740c;
+    background: #e2d9bc;
+    outline: none;
+}
+
+.review_content textarea:focus {
+    outline: none;
+    border: 2px solid #a9740c;
+    box-shadow: none;
+}
+
+.product-review-title {
+    color: #e2d9bc;
+}
+/*######################### review form End #################*/
+
+/*######################### payment #########################*/
+#payment-wrapper {
+    background: #343a40;
+    padding: 10px;
+}
+
+.payment-card {
+    background: #343a40;
+    border: 2px solid #a9740c;
+}
+
+.payment-card-heading {
+    padding: 10px;
+    border-bottom: 2px solid #a9740c;
+    background: #a9740c;
+}
+
+#new_payment .form-group input {
+    border: 2px solid #a9740c;
+    outline: none; 
+}
+
+#new_payment .form-group input:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+
+#payment-button {
+    background: #343a40;
+    border: 1px solid #f7a810;
+    font-weight: 700;
+    color: #f7a810;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    padding: 5px;
+    display: inline-block;
+    width: 95%;
+    font-size: 1.5rem;
+}
+
+#payment-button:hover {
+    background: #e2d9bc;
+    border: 1px solid #f7a810;
+    color: #343a40;
+    text-decoration: none;
+}
+
+/*######################### End payment #########################*/
+
+/*################## Message Form ###########*/
+.contact-card{
+    flex: 0 0 80%;
+    padding: 40px 0;
+    background: rgba(0,0,0,0.6); /*transparent black*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    flex: 0 0 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+form input{
+    margin: 10px 0;
+}
+
+form h3{
+    text-align: center;
+    text-transform: uppercase;
+    color: #ad343e;
+}
+
+form input,
+form textarea{
+    padding: 5px;
+    border: 3px solid #ad343e;
+}
+
+input::placehoder,
+textarea::placehoder{
+    text-transform: uppercase;
+    color: #0d1317;
+}
+
+.form-btn{
+    margin: 20px;
+    font-size: 20px;
+    border-radius: 40px;
+    padding: 5px;
+    background: #ad343e;
+    transition: color 1s ease-in-out, background 1s ease-in-out;
+}
+
+.form-btn:hover {
+    color: #ad343e;
+    background: #f5f3f5;
+}
+
+/*################## Message Form end ###########*/

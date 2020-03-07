@@ -1,0 +1,92 @@
+<section id="first-header-section">
+        <div class="container first-header-section-div">
+            <div class="social-media-icons-div">
+                <ul>
+                    <li><a class="social-media-icons" href="https://www.facebook.com/JuiciiEnterprise/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a></li>
+                    <li><a class="social-media-icons" href="https://www.instagram.com/juicii_enterprise/" class="footer-icon" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></li>
+                </ul>
+            </div>
+            <div id="first-layer-contact-div">
+                <ul>
+                    <li><a href="#" class="first-layer-contact"><i class ="fa fa-phone right-icons"></i><span class="d-none d-md-inline">+237672359428</span></a></li>
+                    <li><a href="#" class="first-layer-contact"><i class ="fa fa-phone right-icons"></i><span class="d-none d-md-inline">+237650757572</span></a></li>
+                    <li><a href="#" class="first-layer-contact"><i class="fa fa-envelope right-icons"></i><span class="d-none d-md-inline">juiciienterprise@gmail.com</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-dark" href="/"><img src="https://res.cloudinary.com/it-s-tech/image/upload/v1580598779/20200131_232003_0000_nuovas.png" atl="logo-pic" id="logo-pic"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon bg-dark"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <% if user_signed_in? %>
+                <div id="search-form-nav-div">
+                  <%= simple_form_for :search, url: search_results_path, method: "GET", html: { class: "form-inline text-center" } do |f| %>
+
+                        <%= f.input :search, label: false %>
+                        <%= f.submit "Search", id: "navbar-search-button", class: "btn"%>
+                    <% end %>
+                  </div>
+                <% end %>
+
+                <ul class="navbar-nav ml-auto">
+
+
+                    <li class="nav-item active">
+                        <%= link_to "Home", root_path, class: "nav-link text-dark" %>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product category</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <% list_category.each do |category| %>
+                                <%= link_to category.name, category, class: "h5 p-3" %><br/>
+                            <% end %>
+                           
+                            
+                        </div>
+                    </li>
+        
+                    <% if user_signed_in? %>
+                    <li class="nav-item active">
+                        <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link text-dark" %>
+                    </li>
+                    <li class="nav-item active">
+                        <%= link_to "Dashboard", current_user, class: "nav-link text-dark" %>
+                    </li>
+                    <% else %>
+                    <li class="nav-item active">
+                        <%= link_to "sign in", new_user_session_path, class: "nav-link text-dark" %>
+                    </li>
+                    <li class="nav-item active">
+                        <%= link_to "create account", new_user_registration_path, class: "nav-link text-dark" %>
+                    </li>
+                    <% end %>
+                    <li class="nav-item">
+                        <%= link_to("About", about_path, class: "nav-link text-dark") %>
+                    </li>
+                    <li class="nav-item">
+                        <%= link_to("Services", services_path, class: "nav-link text-dark") %>
+                    </li>
+                    <li class="nav-item">
+                        <%= link_to("Contact", contact_path, class: "nav-link text-dark") %>
+                    </li>
+                    <% if cart_has_items %>
+                    <li class="nav-item active">
+                      <%= link_to cart_path(@cart) do %>
+                        <span class="icon is-small">
+                          <i class="fa fa-shopping-cart"></i>
+                        </span>
+                        <span>Cart
+                          <%= cart_count_over_one %>
+                        </span>
+                      <% end %>
+                    </li>
+                  <% end %>
+                    
+                </ul>
+            </div>
+        </div>
+  </nav>

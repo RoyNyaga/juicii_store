@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="row mb-5 justify-content-center">
+    <div class="col-md-6 text-center">
+      <h2 class="section-title mb-3"><%= @product.title %></h2>
+      <p>We Help You Win!!</p>
+    </div>
+  </div>
+  <div class="bg-white py-4 mb-4">
+    <div class="row mx-4 my-4 product-item-2 align-items-start">
+      <div class="col-md-6 mb-5 mb-md-0">
+        <div class="d-flex">
+          <%= image_tag(@product.photo_link, class: "img-fluid product-image", alt: "Image") %>
+          <%= image_tag(@product.pictureOne, class: "img-fluid product-image", alt: "Image") %>
+        </div>
+        <div class="d-flex">
+          <%= image_tag(@product.pictureTwo, class: "img-fluid product-image", alt: "Image") %>
+          <%= image_tag(@product.pictureThree, class: "img-fluid product-image", alt: "Image") %>
+        </div>       
+      </div>
+     
+      <div class="col-md-5 ml-auto product-title-wrap">
+        <h3 class="text-black mb-4 font-weight-bold">About This Product</h3>
+        <p class="mb-4"><%= @product.description %></p>
+        
+        <div class="mb-4">
+          <div class="price"><span class="price-tag">Price: </span><%= @product.price %>FCA</div>
+        </div>
+        <h3>Avalability: <%= @product.availability %></h3>
+        <p>
+          <%= button_to "Add to cart", line_items_path(product_id: @product), class: "button is-warning add-to-cart" %>
+        </p>
+      </div>
+    </div>
+  </div>
+    <div id="review-container" class="bg-dark text-white">
+      <h1 class="text-center product-review-title">Product Review</h1>
+      <div class="underline mb-5"></div>
+       <% if current_user %>
+      <div class="row mt-5 mb-4" style="width: 100%;">
+        <div class="col-md-1 col-3">
+          <% unless current_user.image == nil %>
+             <%= image_tag(current_user.image, id: "review-form-user-picture", class: "mt-3 ml-3") %>
+            <% else %>
+            <%= image_tag("https://res.cloudinary.com/it-s-tech/image/upload/v1580598779/20200131_232003_0000_nuovas.png", id: "review-form-user-picture", class: "mt-3 ml-3") %>
+          <% end %>
+        </div>
+        <div class="col-md-6 col-9">
+          <%= render 'reviews/form', review: @review %>
+        </div>         
+        <div class="d-none d-md-block col-md-5">Advert</div>                          
+      </div>
+      <% end %>
+
+        <% @reviews.each do |review| %>
+        <div class="row mb-4" style="width: 100%;">              
+           <div class="col-md-2 col-3 text-center">
+            <% unless review.user.image == nil %>
+             <%= image_tag(review.user.image, class: "review-post-user-picture") %>
+            <% else %>
+            <%= image_tag("https://res.cloudinary.com/it-s-tech/image/upload/v1580598779/20200131_232003_0000_nuovas.png", class: "review-post-user-picture") %>
+          <% end %>
+            <%= review.user.name %>
+          </div>
+          <div class="col-md-5 col-9 review-post-user-content">
+            <p><%= review.content %></p>
+          </div>
+            
+          <div class="d-none d-md-block col-md-5 test">
+            Advert
+          </div>        
+        </div>
+      <% end %>
+    </div>
+</div>
