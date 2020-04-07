@@ -62,6 +62,10 @@ rspec spec/features
 * To see your hosted application on the browser, type the command: <br>
 ``` heroku open```
 
+### Future Features
+* Implementing different payment methods such as Visa card and Paypal.
+* Allowing clients to download a copy of their receipts.
+
 ### Author
 :bust_in_silhouette: [Nyaga Andre Roy](https://github.com/RoyNyaga)
 * Gihub: [RoyNyaga](https://github.com/RoyNyaga)
