@@ -1,8 +1,5 @@
 
 /*######################### registraion form ##########################*/
-.left-user-registration {
-	background: black;  
-}
 
 .new_user {
     margin-top: 100px;
@@ -34,9 +31,8 @@
 }
 
 .create-new-user-button {
-    background: black;
+    background: #3a1707;
     border: 1px solid #f7a810;
-    font-weight: 700;
     color: #f7a810;
 }
 
@@ -44,10 +40,6 @@
     background: transparent;
     border: 1px solid #f7a810;
     color: white;
-}
-
-.right-user-registration {
-	background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url("https://res.cloudinary.com/it-s-tech/image/upload/v1580598782/20200131_234048_0000_wxtuz5.png")center/cover no-repeat fixed;
 }
 
 .facebook-button {
