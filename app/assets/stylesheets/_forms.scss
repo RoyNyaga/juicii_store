@@ -1,7 +1,14 @@
 
 /*######################### registraion form ##########################*/
 
-
+.new_user {
+    margin-top: 100px;
+    border: 2px solid #f7a810;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px #f7a810;
+    font-size: 0.5em;
+}
 
 .new_user .form-group input {
   	background: transparent;
