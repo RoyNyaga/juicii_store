@@ -1,7 +1,7 @@
 
 <%= render "layouts/header" %>
-<section id="our-products">
-    <div class="container my-5">
+<section id="our-products" style="background: #ff5100;">
+    <div class="container">
         <div class="row mb-5 justify-content-center">
             <div class="col-md-6 text-center our-products-written-content">
                 <h3 class="our-products-sub-title">Popular Products</h3>
@@ -11,17 +11,17 @@
         </div>      
         <div class="row">
         	<% @products.each do |product| %>
-          <div class="col-lg-3 col-6 col-md-4 mb-4">
+          <div class="col-lg-3 col-10 col-md-4 mb-4 mx-auto">
             <div class="card h-100">
               <%= link_to image_tag(product.photo_link, class: "card-img-top", alt: "photo here") , product %>
-              <div class="card-body">
+              <div class="card-body p-0">
                 <h4 class="card-title">
-                  <%= link_to product.title, product, class: "product-page-links" %>
+                  <%= link_to product.title, product, class: "products-index-page-links" %>
                 </h4>
-                <h5>Price: <%= product.price %> CFA</h5>
+                <h5 class="products-index-page-price">Price: <%= product.price %> CFA</h5>
               </div>
               <div class="card-footer d-flex justify-content-between">
-                <%= link_to "View", product, class: "product-page-links" %>
+                <%= link_to "SEE MORE", product, class: "products-index-page-links" %>
                 <% if product.availability == true %>
                   <span class="badge badge-pill badge-info">Available</span>
                   <% else %>

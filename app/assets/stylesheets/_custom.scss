@@ -324,15 +324,12 @@
     width: 50%;
 }
 
-.product-page-links{
-    background: #343a40;
-    color: #f7a810;
-    padding: 2px;
+
+/*################ products index page section ##############*/
+.products-index-page-links{
+    font-size: 0.6em;
 }
 
-.product-page-links:hover {
-    background: transparent;
-    color: black;
-    padding: 2px;
-    text-decoration: none;
+.products-index-page-price{
+    font-size: 0.9em;
 }
