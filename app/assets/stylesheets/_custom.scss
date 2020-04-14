@@ -320,10 +320,6 @@
     background: #343a40;
 }
 
-.product-image {
-    width: 50%;
-}
-
 
 /*################ products index page section ##############*/
 .products-index-page-links{
@@ -346,4 +342,11 @@
 }
 .products-index-page-links:hover{
     color: #3a1707;
+}
+
+/*################### product show page section #############3*/
+
+#show-product-pict-and-description-row {
+   background: #9e3402;
+   color: #bdb4af;
 }

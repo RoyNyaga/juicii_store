@@ -6,22 +6,29 @@
     </div>
   </div>
   <div class="bg-white py-4 mb-4">
-    <div class="row mx-4 my-4 product-item-2 align-items-start">
-      <div class="col-md-6 mb-5 mb-md-0">
+    <div class="row" id="show-product-pict-and-description-row">
+      <div class="col-md-6 p-0">
         <div class="card text-center">
-          <%= image_tag(@product.photo_link, class: "img-fluid product-image", alt: "Image") %>            
-        </div>
-                  
+          <%= image_tag(@product.photo_link, class: "card-img-top", alt: "Image") %>  
+        </div>                 
       </div>
      
-      <div class="col-md-5 ml-auto product-title-wrap">
-        <h3 class="text-black mb-4 font-weight-bold">About This Product</h3>
-        <p class="mb-4"><%= @product.description %></p>
+      <div class="col-md-6">
+        <h3 class="text-black mb-2 font-weight-bold text-center pt-3">About This Product</h3>
+        <p class="mb-4"><%= @product.description %>fs dfg fgsdf dsfgsdf sdfgsdf dsfgdf dsfgdf dsfgdfg dfgdsfg sdfgdsfgdsfgsdf dfgds fdsf dfg dfg dfg dfg sdfg dsfg dsfg dfsg dfg dfg dfg dsfg dfg dfg dfg sdfg dsfg dfg dfg dsfg dfg dfg dfg dsfg sdfg</p>
         
-        <div class="mb-4">
-          <div class="price"><span class="price-tag">Price: </span><%= @product.price %>FCA</div>
+        <div class="d-flex justify-content-between">
+          <div class="products-index-page-price"><span class="price-tag">Price: </span><%= @product.price %>FCA</div>
+          <div>
+            <% if @product.availability == true %>
+            <span class="badge badge-pill badge-info">Available</span>
+            <% else %>
+            <span class="badge badge-pill badge-danger">Finished</span>
+            <a>
+          <% end %>
+          </div>
         </div>
-        <h3>Avalability: <%= @product.availability %></h3>
+       
         <p>
           <%= button_to "Add to cart", line_items_path(product_id: @product), class: "button is-warning add-to-cart" %>
         </p>
