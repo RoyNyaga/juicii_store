@@ -1,6 +1,6 @@
 
 <%= render "layouts/header" %>
-<section id="our-products" style="background: #ff5100;">
+<section id="our-products">
     <div class="container">
         <div class="row mb-5 justify-content-center">
             <div class="col-md-6 text-center our-products-written-content">
@@ -12,13 +12,13 @@
         <div class="row">
         	<% @products.each do |product| %>
           <div class="col-lg-3 col-10 col-md-4 mb-4 mx-auto">
-            <div class="card h-100">
+            <div class="card h-100 card-border">
               <%= link_to image_tag(product.photo_link, class: "card-img-top", alt: "photo here") , product %>
               <div class="card-body p-0">
                 <h4 class="card-title">
-                  <%= link_to product.title, product, class: "products-index-page-links" %>
+                  <%= link_to product.title, product, class: "products-index-page-links text-center pt-1 d-block" %>
                 </h4>
-                <h5 class="products-index-page-price">Price: <%= product.price %> CFA</h5>
+                <span class="products-index-page-price">Price: <%= product.price %> CFA</span>
               </div>
               <div class="card-footer d-flex justify-content-between">
                 <%= link_to "SEE MORE", product, class: "products-index-page-links" %>
