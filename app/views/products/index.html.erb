@@ -4,14 +4,14 @@
     <div class="container">
         <div class="row mb-5 justify-content-center">
             <div class="col-md-6 text-center our-products-written-content">
-                <h3 class="our-products-sub-title">Popular Products</h3>
+                <h3 class="our-products-headings mt-5">Popular Products</h3>
                 <h2 class="our-products-title mb-3">Our Products</h2>
-                <p class="our-products-intro">The best shopping experience</p>
+                <p class="our-products-headings">The best shopping experience.</p>
             </div>
         </div>      
         <div class="row">
         	<% @products.each do |product| %>
-          <div class="col-lg-3 col-10 col-md-4 mb-4 mx-auto">
+          <div class="col-lg-3 col-10 col-md-4 mb-4">
             <div class="card h-100 card-border">
               <%= link_to image_tag(product.photo_link, class: "card-img-top", alt: "photo here") , product %>
               <div class="card-body p-0">

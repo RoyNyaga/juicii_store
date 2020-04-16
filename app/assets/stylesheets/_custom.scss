@@ -1,3 +1,7 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
 
 /*######################### header ##########################*/
 /*first-layer-section*/
@@ -103,17 +107,6 @@
 /*################ main start ########################*/
 
 /*our products*/
-
-
-.our-products-sub-title {
-    color: #adb5bd;
-    font-size: 1.2em;
-    font-variant: small-caps
-}
-
-.our-products-intro {
-    color: #adb5bd;
-}
 
 /*end our products*/
 
@@ -327,26 +320,34 @@
 }
 
 .products-index-page-price{
-    font-size: 0.9em;
+    font-size: 0.7em;
     background: #3a1707;
     border: 1px solid #f7a810;
     color: #f7a810;
 }
 
 .card-border{
-    border: 3px solid #9e3402;
+    border: 3px solid #f7a80f;
 }
 
 .products-index-page-links{
     color: #3a1707;
+    font-size: 0.5em;
 }
 .products-index-page-links:hover{
     color: #3a1707;
 }
 
+#our-products {
+    background: orange;
+}
+
+.our-products-headings{
+    color: white;
+}
 /*################### product show page section #############3*/
 
 #show-product-pict-and-description-row {
-   background: #9e3402;
-   color: #bdb4af;
+   background: pink;
+   color: black;
 }
