@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_14_192156) do
+ActiveRecord::Schema.define(version: 2020_04_19_205549) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -99,13 +99,13 @@ ActiveRecord::Schema.define(version: 2020_04_14_192156) do
     t.string "title"
     t.text "description"
     t.boolean "availability", default: true
-    t.decimal "price", precision: 10, scale: 2, default: "0.0"
+    t.string "price", default: "0.0"
     t.string "photo_link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "category_id"
     t.boolean "advert"
-     t.boolean "promotion"
+    t.boolean "promotion"
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["title"], name: "index_products_on_title"
   end
