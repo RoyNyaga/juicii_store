@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_19_205549) do
+ActiveRecord::Schema.define(version: 2020_04_19_232604) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -106,6 +106,7 @@ ActiveRecord::Schema.define(version: 2020_04_19_205549) do
     t.bigint "category_id"
     t.boolean "advert"
     t.boolean "promotion"
+    t.string "pro_price"
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["title"], name: "index_products_on_title"
   end

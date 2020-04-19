@@ -36,7 +36,6 @@
                         <span class="badge badge-pill badge-info">Available</span>
                         <% else %>
                         <span class="badge badge-pill badge-danger">Finished</span>
-                        <a>
                       <% end %>
                     </div>
                   </div>
@@ -57,17 +56,11 @@
                         <h4 class="card-title">
                           <%= link_to product.title, product, class: "products-index-page-links text-center pt-1 d-block" %>
                         </h4>
-                        <span class="products-index-page-price">Price: <%= product.price %> CFA</span>
-                      </div>
-                      <div class="card-footer d-flex justify-content-between">
-                        <%= link_to "SEE MORE", product, class: "products-index-page-links" %>
-                        <% if product.availability == true %>
-                          <span class="badge badge-pill badge-info">Available</span>
-                          <% else %>
-                          <span class="badge badge-pill badge-danger">Finished</span>
-                          <a>
-                        <% end %>
-                      </div>
+                        <div class="card-footer d-flex justify-content-between p-0">
+                          <span class="products-index-page-price"><del>Price: <%= product.price %> CFA</del></span>
+                          <span class="products-index-page-price">Price: <%= product.pro_price %> CFA</span>
+                        </div>
+                      </div>                     
                     </div>
                   </div>
                 <% end %>

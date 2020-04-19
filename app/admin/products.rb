@@ -1,5 +1,5 @@
 ActiveAdmin.register Product do
 
   permit_params :title, :description, :availability, 
-  :price, :photo_link, :category_id, :advert, :promotion
+  :price, :photo_link, :category_id, :advert, :promotion, :pro_price
 end
