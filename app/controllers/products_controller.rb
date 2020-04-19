@@ -1,7 +1,9 @@
 class ProductsController < ApplicationController
 	
   def index
-  	@home_page_product = Product.where(advert: true)
+  	@home_page_products = Product.where(advert: true)
+    @home_page_promotion_products = Product.where(promotion: true)
+    @all_category = Category.all
   end
 
   def show
