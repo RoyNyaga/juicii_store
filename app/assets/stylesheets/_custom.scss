@@ -330,6 +330,18 @@ body{
     top: 0;
 }
 
+#home-page-promotion-div{
+    text: center;
+    padding: 10px;
+    background: #343a40;
+    color: #dec391;
+    border: 2px solid #dec391;
+    border-radius: 10px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
 .home-page-category-links{
     color: orange;    
 }
