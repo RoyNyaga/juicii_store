@@ -10,12 +10,13 @@
             </div>
         </div>      
         <div class="row">
-        	<div class="col-md-2">
-            <% @all_category.each do |category| %>
-              <ul>
-                <li><%= link_to category.name, category %></li>
-              </ul>
-            <% end %>
+        	<div class="col-md-2 p-5 bg-dange" id="home-page-category-div">
+            <h4 style="color: #dec391;">Categories</h4>           
+            <ul class="list-unstyled">
+              <% @all_category.each do |category| %>
+                <li class="home-page-category-list"><%= link_to category.name, category, class: "home-page-category-links" %></li>
+              <% end %>
+            </ul>          
           </div>
           <div class="col-md-8">
             <div class="row">
