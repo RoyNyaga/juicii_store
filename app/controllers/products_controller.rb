@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 	
   def index
-  	@products = Product.all
+  	@home_page_product = Product.where(advert: true)
   end
 
   def show

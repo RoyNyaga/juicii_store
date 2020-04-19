@@ -10,7 +10,7 @@
             </div>
         </div>      
         <div class="row">
-        	<% @products.each do |product| %>
+        	<% @home_page_product.each do |product| %>
           <div class="col-lg-3 col-10 col-md-4 mb-4">
             <div class="card h-100 card-border">
               <%= link_to image_tag(product.photo_link, class: "card-img-top", alt: "photo here") , product %>
