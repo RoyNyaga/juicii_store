@@ -42,6 +42,29 @@
                 </div>
               <% end %>
             </div>
+            <div class="row">
+              <% @home_page_products.each do |product| %>
+                <div class="col-lg-3 col-10 col-md-4 mb-4 mx-auto">
+                  <div class="card h-100 card-border">
+                    <%= link_to image_tag(product.photo_link, class: "card-img-top", alt: "photo here") , product %>
+                    <div class="card-body p-0">
+                      <h4 class="card-title">
+                        <%= link_to product.title, product, class: "products-index-page-links text-center pt-1 d-block" %>
+                      </h4>
+                      <span class="products-index-page-price">Price: <%= product.price %> CFA</span>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                      <%= link_to "SEE MORE", product, class: "products-index-page-links" %>
+                      <% if product.availability == true %>
+                        <span class="badge badge-pill badge-info">Available</span>
+                        <% else %>
+                        <span class="badge badge-pill badge-danger">Finished</span>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
           </div>
           <div class="d-none d-md-block col-md-2">
             <div id="home-page-promotion-div">

@@ -327,6 +327,7 @@ body{
     height: 50vh; /* Full-height: remove this if you want "auto" height */
     position: -webkit-sticky; /* Safari */
     position: sticky;
+    overflow: scroll;
     top: 0;
 }
 
@@ -335,6 +336,8 @@ body{
     padding: 10px;
     background: #343a40;
     color: #dec391;
+    height: 70vh;
+    overflow: scroll;
     border: 2px solid #dec391;
     border-radius: 10px;
     position: -webkit-sticky; /* Safari */
