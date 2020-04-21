@@ -65,7 +65,7 @@ class PaymentsController < ApplicationController
 				redirect_to current_user
 			end  
 		else
-			flash[:danger] = "Invalide Phone Number, enter phone number with no spaces ex: 237682879062"
+			flash[:danger] = "Invalide Phone Number, enter phone number with no spaces and cameroon based numbers, ex: 237682879062"
 			render "payments/new"
 		end
 	end  

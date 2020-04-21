@@ -1,3 +1,7 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
 
 /*######################### header ##########################*/
 /*first-layer-section*/
@@ -103,17 +107,6 @@
 /*################ main start ########################*/
 
 /*our products*/
-
-
-.our-products-sub-title {
-    color: #adb5bd;
-    font-size: 1.2em;
-    font-variant: small-caps
-}
-
-.our-products-intro {
-    color: #adb5bd;
-}
 
 /*end our products*/
 
@@ -320,19 +313,87 @@
     background: #343a40;
 }
 
-.product-image {
-    width: 50%;
+
+/*################ products index page section ##############*/
+.products-index-page-links{
+    font-size: 0.6em;
 }
 
-.product-page-links{
+#home-page-category-div{
+    padding: 10px;
     background: #343a40;
-    color: #f7a810;
-    padding: 2px;
+    border: 2px solid #dec391;
+    border-radius: 10px;
+    height: 50vh; /* Full-height: remove this if you want "auto" height */
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
 }
 
-.product-page-links:hover {
-    background: transparent;
-    color: black;
-    padding: 2px;
-    text-decoration: none;
+#home-page-promotion-div{
+    text: center;
+    padding: 10px;
+    background: #343a40;
+    color: #dec391;
+    border: 2px solid #dec391;
+    border-radius: 10px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.home-page-category-links{
+    color: orange;    
+}
+
+.home-page-category-links:hover{
+     text-decoration: none; 
+     color: black; 
+}
+
+.home-page-category-list:hover{
+    background: #dec391;
+    padding: 5px;
+
+}
+
+.products-index-page-price{
+    font-size: 0.7em;
+    background: #3a1707;
+    border: 1px solid #f7a810;
+    color: #f7a810;
+}
+
+.card-border{
+    border: 3px solid #f7a80f;
+}
+
+.products-index-page-links{
+    color: #3a1707;
+    font-size: 0.5em;
+}
+.products-index-page-links:hover{
+    color: #3a1707;
+}
+
+#our-products {
+    background: orange;
+}
+
+.our-products-headings{
+    color: white;
+}
+/*################### product show page section #############3*/
+
+#show-product-pict-and-description-row {
+   background: #f3cd89;
+   color: black;
+}
+
+#product-show-page{
+    background: orange;
+}
+
+.add-to-cart{
+    background: #ffa500;
 }

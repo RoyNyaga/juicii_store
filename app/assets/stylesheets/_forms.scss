@@ -1,8 +1,5 @@
 
 /*######################### registraion form ##########################*/
-.left-user-registration {
-	background: black;  
-}
 
 .new_user {
     margin-top: 100px;
@@ -10,6 +7,7 @@
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 15px 30px #f7a810;
+    font-size: 0.5em;
 }
 
 .new_user .form-group input {
@@ -18,7 +16,7 @@
     outline: none;
     border-bottom: 2px solid #f7a810;
     color: white;
-    font-size: 1.5em;
+
 }
 
 .new_user .form-group input:focus {
@@ -34,9 +32,8 @@
 }
 
 .create-new-user-button {
-    background: black;
+    background: #3a1707;
     border: 1px solid #f7a810;
-    font-weight: 700;
     color: #f7a810;
 }
 
@@ -44,10 +41,6 @@
     background: transparent;
     border: 1px solid #f7a810;
     color: white;
-}
-
-.right-user-registration {
-	background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url("https://res.cloudinary.com/it-s-tech/image/upload/v1580598782/20200131_234048_0000_wxtuz5.png")center/cover no-repeat fixed;
 }
 
 .facebook-button {
@@ -224,55 +217,6 @@
 /*######################### End payment #########################*/
 
 /*################## Message Form ###########*/
-.contact-card{
-    flex: 0 0 80%;
-    padding: 40px 0;
-    background: rgba(0,0,0,0.6); /*transparent black*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-form{
-    flex: 0 0 60%;
-    display: flex;
-    flex-direction: column;
-}
-
-form input{
-    margin: 10px 0;
-}
-
-form h3{
-    text-align: center;
-    text-transform: uppercase;
-    color: #ad343e;
-}
-
-form input,
-form textarea{
-    padding: 5px;
-    border: 3px solid #ad343e;
-}
-
-input::placehoder,
-textarea::placehoder{
-    text-transform: uppercase;
-    color: #0d1317;
-}
-
-.form-btn{
-    margin: 20px;
-    font-size: 20px;
-    border-radius: 40px;
-    padding: 5px;
-    background: #ad343e;
-    transition: color 1s ease-in-out, background 1s ease-in-out;
-}
-
-.form-btn:hover {
-    color: #ad343e;
-    background: #f5f3f5;
-}
 
 /*################## Message Form end ###########*/
