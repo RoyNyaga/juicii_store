@@ -15,14 +15,13 @@
             </div>
         </div>
     </section>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand text-dark" href="/"><img src="https://res.cloudinary.com/it-s-tech/image/upload/v1580598779/20200131_232003_0000_nuovas.png" atl="logo-pic" id="logo-pic"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon bg-dark"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-              <% if user_signed_in? %>
                 <div id="search-form-nav-div">
                   <%= simple_form_for :search, url: search_results_path, method: "GET", html: { class: "form-inline text-center" } do |f| %>
 
@@ -30,8 +29,6 @@
                         <%= f.submit "Search", id: "navbar-search-button", class: "btn"%>
                     <% end %>
                   </div>
-                <% end %>
-
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
                         <%= link_to "Home", root_path, class: "nav-link text-dark" %>
