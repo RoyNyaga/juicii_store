@@ -20,7 +20,12 @@
             <p class="mb-4"><%= @product.description %></p>
             
             <div class="d-flex justify-content-between">
-              <div class="products-index-page-price"><span class="price-tag">Price: </span><%= @product.price %>FCA</div>
+              <% if @product.promotion == true %>
+                <span class="products-index-page-price"><del>Price: <%= @product.price %>CFA</del></span>
+                <span class="products-index-page-price">Price: <%= @product.pro_price %> CFA</span>
+              <% else %>
+                <span class="products-index-page-price">Price: <%= @product.price %>CFA</span>
+              <% end %>
               <div>
                 <% if @product.availability == true %>
                 <span class="badge badge-pill badge-info">Available</span>
@@ -31,10 +36,12 @@
               </div>
               <div>
                 <%#= button_to "Add to cart", line_items_path(product_id: @product), class: "add-to-cart" %>
-                <a href="http://bit.ly/JuiciiEnterpise" target="_blanck"><i style="background: green; color: white;" class="fab fa-whatsapp">Purchase Now</i></a>
               </div>
             </div>
             <small class="text-center"><span class="bg-danger">NOTICE: </span>Please make sure you have whatsapp installed in your computer or whatever device you are using for this purpose.</small>
+            <div class="text-center">
+              <a href="http://bit.ly/JuiciiEnterpise" target="_blanck"><i style="background: green; color: white; padding: 5px; border: 2px solid white;" class="fab fa-whatsapp">Purchase Now</i></a>
+            </div>
           </div>         
         </div>
       </div>
