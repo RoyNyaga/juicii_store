@@ -402,6 +402,8 @@ body{
     background: orange;
 }
 
+/*##################### about page ##################*/
+
 #about-section-wrapper{
    color: #5f5d5b;
 }
@@ -416,4 +418,12 @@ body{
 
 #philosophy-div {
     background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(https://res.cloudinary.com/it-s-tech/image/upload/v1580503415/differences-background_l1ub0m.jpg)center/cover fixed no-repeat;
+}
+
+
+/*######################## Services section ######################*/
+
+.home-page-level-three-blue-div{
+    background: #343a40;
+    color: orange;
 }
