@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get '/about', to: "static_pages#about"
   get '/services', to: "static_pages#services"
   get '/contact', to: "static_pages#contact"
+  get '/promotion', to: "static_pages#promotion"
   resources :categories, only: [:show]
   resources :reviews
   resources :line_items
