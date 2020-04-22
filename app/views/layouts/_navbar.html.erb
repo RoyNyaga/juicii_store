@@ -38,10 +38,10 @@
                             <%= f.input :search, label: false, placeholder: "search a product" %>
                             <%= f.submit "Search", id: "navbar-search-button", class: "btn"%>
                         <% end %>
-                    </li>
-                    <li class="nav-item active">
-                        <a href="/promotion" class="nav-link text-dark">Promotions</a>
-                    </li>
+                   </li>
+                   <li class="nav-item">
+                        <%= link_to("Products", root_path, class: "nav-link text-dark") %>
+                    </li>                    
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-dark" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product category</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
@@ -49,8 +49,7 @@
                                 <%= link_to category.name, category, class: "h5 p-3" %><br/>
                             <% end %>
                         </div>
-                    </li>
-        
+                    </li>       
                     <% if user_signed_in? %>
                     <li class="nav-item active">
                         <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link text-dark" %>
@@ -59,6 +58,9 @@
                         <%= link_to "Dashboard", current_user, class: "nav-link text-dark" %>
                     </li>
                     <% else %>
+                    <li class="nav-item active">
+                        <a href="/promotion" class="nav-link text-dark">Promotions</a>
+                    </li>
                     <li class="nav-item active">
                         <%= link_to "sign in", new_user_session_path, class: "nav-link text-dark" %>
                     </li>
