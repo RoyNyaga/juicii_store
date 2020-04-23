@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-	
+ before_action :authenticate_user!, only: [:show]	
   def index
   	@home_page_products = Product.where(advert: true)
     @home_page_promotion_products = Product.where(promotion: true)
