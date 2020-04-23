@@ -432,10 +432,10 @@ body{
 .home-page-contact-icons{
     font-size: 1.7em;
     padding: 10px;
-    background: #ff6633;
-    border: 2px solid #f73f07;
+    background: #343a40;
+    border: 2px solid orange;
     border-radius: 50px;
-    color: white;
+    color: orange;
 }
 
 .twitter {
@@ -473,4 +473,27 @@ body{
     border: 1px solid green;
     border-radius: 50px;
     padding: 10px;
+}
+
+#new_message .form-control {
+    border: none;
+    border-bottom: 2px solid #989494;
+    color: black;
+}
+
+#new_message .form-control:focus {
+    outline: none;
+    border: none;
+}
+
+#send-message-button{
+    background: #343a40;
+    color: orange;
+    padding: 10px;
+    border: 2px solid orange;
+}
+
+#send-message-button:hover{
+    background: white;
+    color: black;
 }
