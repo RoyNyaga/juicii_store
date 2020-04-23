@@ -28,7 +28,14 @@
                       <h4 class="card-title">
                         <%= link_to product.title, product, class: "products-index-page-links text-center pt-1 d-block" %>
                       </h4>
-                      <span class="products-index-page-price">Price: <%= product.price %> CFA</span>
+                      <div class="d-flex justify-content-between">
+                        <% if product.promotion == true %>
+                          <span class="products-index-page-price"><del>Price: <%= product.price %>CFA</del></span>
+                          <span class="products-index-page-price">Price: <%= product.pro_price %> CFA</span>
+                        <% else %>
+                          <span class="products-index-page-price">Price: <%= product.price %>CFA</span>
+                      <% end %>                        
+                      </div>                     
                     </div>
                     <div class="card-footer d-flex justify-content-between">
                       <%= link_to "SEE MORE", product, class: "products-index-page-links" %>

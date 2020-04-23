@@ -64,14 +64,9 @@ body{
 
 /*navbar##*/
 
-.navbar-brand {
-    font-size: 3em;
-    color: black;
-    width: 25%;
-}
 
 #logo-pic {
-    width: 20%;
+    width: 100%;
 }
 
 #full-stop {
@@ -308,11 +303,6 @@ body{
 
 }
 
-#about-team-heading {
-    color: #f7a810;
-    background: #343a40;
-}
-
 
 /*################ products index page section ##############*/
 .products-index-page-links{
@@ -327,6 +317,7 @@ body{
     height: 50vh; /* Full-height: remove this if you want "auto" height */
     position: -webkit-sticky; /* Safari */
     position: sticky;
+    overflow: scroll;
     top: 0;
 }
 
@@ -335,6 +326,8 @@ body{
     padding: 10px;
     background: #343a40;
     color: #dec391;
+    height: 70vh;
+    overflow: scroll;
     border: 2px solid #dec391;
     border-radius: 10px;
     position: -webkit-sticky; /* Safari */
@@ -396,4 +389,111 @@ body{
 
 .add-to-cart{
     background: #ffa500;
+}
+
+/*#################### Promotion page ####################*/
+
+#promotion-wrapper-div{
+    background: orange;
+}
+
+/*############### Category shoe page #################*/
+#category-show-wrapper-div{
+    background: orange;
+}
+
+/*##################### about page ##################*/
+
+#about-section-wrapper{
+   color: #5f5d5b;
+}
+
+#mission-div {
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(https://res.cloudinary.com/it-s-tech/image/upload/v1581986499/first_m7ymqh.jpg)center/cover fixed no-repeat;
+}
+
+#vision-div {
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(https://res.cloudinary.com/it-s-tech/image/upload/v1581986476/how-to-speed-up-windows-10-hero1551746302019_xstnxp.jpg)center/cover fixed no-repeat;
+}
+
+#philosophy-div {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(https://res.cloudinary.com/it-s-tech/image/upload/v1580503415/differences-background_l1ub0m.jpg)center/cover fixed no-repeat;
+}
+
+
+/*######################## Services section ######################*/
+
+.home-page-level-three-blue-div{
+    background: #343a40;
+    color: orange;
+}
+
+/*######################### contact section ################*/
+.home-page-contact-icons{
+    font-size: 1.7em;
+    padding: 10px;
+    background: #343a40;
+    border: 2px solid orange;
+    border-radius: 50px;
+    color: orange;
+}
+
+.twitter {
+    background: #2a7bd2;
+    color: white;
+    font-size: 2em;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.linkedin{
+    font-size: 2em;
+    background: white;
+    color: #2a7bd2;
+    border: 1px solid #2a7bd2;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.facebook{
+    font-size: 2em;
+    background: white;
+    color: #1414af;
+    paddding: 10px;
+    border: 1px solid #1414af;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.whatsapp{
+    font-size: 2em;
+    background: white;
+    color: green;
+    paddding: 10px;
+    border: 1px solid green;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+#new_message .form-control {
+    border: none;
+    border-bottom: 2px solid #989494;
+    color: black;
+}
+
+#new_message .form-control:focus {
+    outline: none;
+    border: none;
+}
+
+#send-message-button{
+    background: #343a40;
+    color: orange;
+    padding: 10px;
+    border: 2px solid orange;
+}
+
+#send-message-button:hover{
+    background: white;
+    color: black;
 }
