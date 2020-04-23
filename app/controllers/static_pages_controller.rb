@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
+  	@message = Message.new
   end
 
   def promotion

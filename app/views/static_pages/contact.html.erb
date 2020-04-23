@@ -1,6 +1,84 @@
+
+
+
 <section id="about-section-wrapper" class="bg-daner">
 	<div class="jumbotron">
 	</div>
+
+	<div class="container">
+	<div class="text-center my-5">
+		<p class="contact-links">Got a question</p>
+		<h2>Contact the support team.</h2>
+		<p>We're here to help and answer any question you might <br> have. We look forward to hearing from you.</p>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-6">
+			<div>
+        <div class="mt-5">
+          <div class="d-flex">
+            <div class="home-page-contact-icon-div">
+              <i class="far fa-envelope home-page-contact-icons"></i>
+            </div>
+            <div class="pl-3">
+              <h6 style="font-weight: 700">Email</h6>
+              <p>juiciienterprise@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="d-flex">
+            <div class="home-page-contact-icon-div">
+              <i class="fas fa-mobile-alt home-page-contact-icons"></i>
+            </div>
+            <div class="pl-4">
+              <h6 style="font-weight: 700">CALL US !</h6>
+              <p> +237672359428</p>
+              <p> +237650757572</p> 
+            </div>
+          </div>
+
+          <div class="d-flex">
+            <div class="home-page-contact-icon-div">
+              <i class="fas fa-map-marked-alt home-page-contact-icons"></i>
+            </div>
+            <div class="pl-3">
+              <h6 style="font-weight: 700">ADDRESS</h6>
+              <p>Molyko Buea opposite UB Junction.</p>
+            </div>
+          </div>
+
+          <div>
+            <p class="bold py-5">For more inquiries and to know the office close to you please call us using the numbers above.</p>
+          </div>
+
+          <div class="d-flex justify-content-between">
+              <a href="https://twitter.com/OYL_Campaign" target="_blank"><i class="fab fa-twitter-square twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook-square facebook"></i></a>
+              <a href="https://www.linkedin.com/company/oyl-campaign/" target="_blank"><i class="fab fa-linkedin linkedin"></i></a>
+              <a href="#"><i class="fab fa-whatsapp-square whatsapp"></i></a>
+            </div>
+
+        </div>
+      </div>
+		</div>
+		
+		<div class="col-md-5 text-dark my-5">
+      <div id="form">
+        <%= simple_form_for @message do |f| %>
+          <%= f.error_notification %>
+          <%= f.input :name, required: true %>
+          <%= f.input :email, required: true, type: "email" %>
+          <%= f.input :message, required: true %>
+          <%= f.button :submit, "SEND MESSAGE", id: "send-message-button" %>
+        <% end %>
+      </div>     
+    </div>
+        
+	</div>
+</div>
+
+
+
 
 		<div class="row mt-5">
 			<div class="col-md-10 mx-auto">
