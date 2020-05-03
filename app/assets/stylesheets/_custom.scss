@@ -2,6 +2,21 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+#error_explanation h2{
+    font-size: 1.7em;
+    color: #ea9898;
+}
+
+#error_explanation li {
+    font-size: 1.5em;
+    color: #ea9898;
+}
+
+.invalid-feedback{
+    font-size: 1.5em;
+    color: #ea9898;
+}
+
 
 /*######################### header ##########################*/
 /*first-layer-section*/
