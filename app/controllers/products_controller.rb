@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
   def show
 
   	@product = Product.find_by(id: params[:id])
+    @product_category = @product.category.products
 
   	if @product == nil
   		flash[:danger] = "product does not exist"

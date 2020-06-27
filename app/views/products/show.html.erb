@@ -46,42 +46,37 @@
         </div>
       </div>
     </div>
-      <div id="review-container" class="bg-dark text-white">
-        <h1 class="text-center product-review-title">Product Review</h1>
-        <div class="underline mb-5"></div>
-         <% if current_user %>
-        <div class="row mt-5 mb-4" style="width: 100%;">
-          <div class="col-md-1 col-3">
-            <% unless current_user.image == nil %>
-               <%= image_tag(current_user.image, id: "review-form-user-picture", class: "mt-3 ml-3") %>
-              <% else %>
-              <%= image_tag("https://res.cloudinary.com/it-s-tech/image/upload/v1580598779/20200131_232003_0000_nuovas.png", id: "review-form-user-picture", class: "mt-3 ml-3") %>
-            <% end %>
-          </div>
-          <div class="col-md-6 col-9">
-            <%= render 'reviews/form', review: @review %>
-          </div>         
-          <div class="d-none d-md-block col-md-5">Advert</div>                          
-        </div>
-        <% end %>
+  </div>
 
-          <% @reviews.each do |review| %>
-          <div class="row mb-4" style="width: 100%;">              
-             <div class="col-md-2 col-3 text-center">
-              <% unless review.user.image == nil %>
-               <%= image_tag(review.user.image, class: "review-post-user-picture") %>
-              <% else %>
-              <%= image_tag("https://res.cloudinary.com/it-s-tech/image/upload/v1580598779/20200131_232003_0000_nuovas.png", class: "review-post-user-picture") %>
-            <% end %>
-              <%= review.user.name %>
+  <div class="container">
+    <h4 class="text-center text-muted my-5">Related Products</h4>
+    <div class="row">
+        <% @product_category.each do |product| %>
+          <div class="col-lg-3 col-10 col-md-4 mb-4 mx-auto">
+            <div class="card h-100 card-border">
+              <%= link_to image_tag(product.photo_link, class: "card-img-top", alt: "photo here") , product %>
+              <div class="card-body p-0">
+                <h4 class="card-title">
+                  <%= link_to product.title, product, class: "products-index-page-links text-center pt-1 d-block" %>
+                </h4>
+                <div class="d-flex justify-content-between">
+                  <% if product.promotion == true %>
+                    <span class="products-index-page-price"><del>Price: <%= product.price %>CFA</del></span>
+                    <span class="products-index-page-price">Price: <%= product.pro_price %> CFA</span>
+                  <% else %>
+                    <span class="products-index-page-price">Price: <%= product.price %>CFA</span>
+                <% end %>                        
+                </div>                     
+              </div>
+              <div class="card-footer d-flex justify-content-between">
+                <%= link_to "SEE MORE", product, class: "products-index-page-links" %>
+                <% if product.availability == true %>
+                  <span class="badge badge-pill badge-info">Available</span>
+                  <% else %>
+                  <span class="badge badge-pill badge-danger">Finished</span>
+                <% end %>
+              </div>
             </div>
-            <div class="col-md-5 col-9 review-post-user-content">
-              <p><%= review.content %></p>
-            </div>
-              
-            <div class="d-none d-md-block col-md-5 test">
-              Advert
-            </div>        
           </div>
         <% end %>
       </div>
