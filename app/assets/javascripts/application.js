@@ -10,9 +10,22 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require bootstrap-sprockets
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+document.addEventListener('turbolinks:load', function () {
+  $(document).ready(() => {
+  	console.log('Yep this works')
+    const displayPopUpForm = () => {
+      var position = $(this).scrollTop()
+      console.log(position)
+      if (position > 700) {
+        $('#modalsignup').modal('show')
+      }
+    }
+
+    window.onscroll = function () { displayPopUpForm() }
+  })
+})
