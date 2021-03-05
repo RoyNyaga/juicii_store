@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: juicii_store_production
-  
+  database: juicii_store_production2
+  username: <%= ENV['JUICII_STORE_USERNAME'] %>
+  password: <%= ENV['JUICII_STORE_DATABASE_PASSWORD'] %>
   
