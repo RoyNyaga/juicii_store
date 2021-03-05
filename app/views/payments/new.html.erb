@@ -46,12 +46,13 @@
 				</table>
 			</div>
 			<div class="col-md-4 mx-auto col-10">
+        <h3>Use this phone number for testing: 237671172775</h3>
 				<div class="card payment-card">
 					<div class="card-heading payment-card-heading text-center">Buy in safety with Juicii</div>
 					<div class="card-body payment-card-body">
 						<%= simple_form_for(@payment) do |f| %>
 							<%= f.error_notification %>
-							<%= f.input :phone, input_html: { value: "237"}, hint: "There should be no spaces example 237617780276" %>
+							<%= f.input :phone, hint: "There should be no spaces example 237617780276" %>
 							<%= f.input :amount, :as => :hidden, :input_html => { :value => @cart.total_price } %>
 							<%= f.input :delivery, collection: ["YES","NO"], hint: "Only for delivery purposes" %>
 							<%= f.input :town, collection: ["Buea","Tiko","Limbe","Kumba", "Moyuka", "Bamenda"], hint: "Only for delivery purposes" %>
