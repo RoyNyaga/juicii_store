@@ -20,8 +20,7 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: nyaga
-  password: <%= ENV['JUICII_STORE_DATABASE_PASSWORD'] %>
+
 
 development:
   <<: *default
@@ -83,4 +82,6 @@ test:
 production:
   <<: *default
   database: juicii_store_production
+  username: <%= ENV['JUICII_STORE_USERNAME'] %>
+  password: <%= ENV['JUICII_STORE_DATABASE_PASSWORD'] %>
   
