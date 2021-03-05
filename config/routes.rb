@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'products/index'
   get 'products/show'
   devise_for :users, controllers: {
-  	registrations: 'registrations', omniauth_callbacks: 'users/omniauth_callbacks'
+  	registrations: 'registrations' , omniauth_callbacks: 'users/omniauth_callbacks'
   }
 
 

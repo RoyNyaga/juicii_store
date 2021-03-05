@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.4'
+ruby '2.6.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -67,7 +67,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # active admin and Plus integrations with:
 gem 'activeadmin'
-gem 'devise'
+# gem 'devise'
+gem 'devise', github: 'heartcombo/devise'
 # Bootstrap 4 gem
 gem 'bootstrap', '~> 4.3.1'
 
@@ -79,6 +80,6 @@ gem 'font_awesome5_rails'
 
 gem 'httparty', '~> 0.17.1'
 gem 'simple_form', '~> 5.0', '>= 5.0.1'
-gem 'omniauth-facebook', '~> 5.0'
+# gem 'omniauth', '~> 2.0', '>= 2.0.3'
+gem 'omniauth-facebook', '~> 8.0'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
-
