@@ -78,7 +78,7 @@ gem 'jquery-rails'
 #font awesome 5 gem
 gem 'font_awesome5_rails'
 
-gem 'httparty', '~> 0.17.1'
+gem 'httparty', '~> 0.21.0'
 gem 'simple_form', '~> 5.0', '>= 5.0.1'
 # gem 'omniauth', '~> 2.0', '>= 2.0.3'
 gem 'omniauth-facebook', '~> 8.0'
